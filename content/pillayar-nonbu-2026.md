@@ -1,7 +1,7 @@
 ---
 title: "Pillayar Nonbu 2026"
 description: "Pillayar Nonbu 2026 event information and background for the Nagarathar community."
-ogImage: "/assets/images/ganesha-2026.png"
+ogImage: "assets/images/ganesha-2026.png"
 event: true
 hero:
   title: "Pillayar<br>Nonbu 2026"
@@ -21,7 +21,7 @@ hero:
 
 <section class="content-section">
   <h2>Learn about Pillayar Nonbu</h2>
-  <img class="float-image" src="/assets/images/pillayar-nonbu.jpg" alt="Pillayar Nonbu observance">
+  <img class="float-image" src="assets/images/pillayar-nonbu.jpg" alt="Pillayar Nonbu observance">
   <p>Pillayar Nonbu is a unique festival that is celebrated by the Nattukottai Nagarathars of Chettinad.</p>
   <p>The Nagarathars worship Lord Pillayar, also known as Ganesha, and observe fasting, known as Nonbu or <span lang="ta">நோன்பு</span> in Tamil, during this festival.</p>
   <p>This festival is an annual event celebrated in the month of December, on the 21st day after the deepam, the sacred fire, is lit in the Tamil month of Karthigai at the Thiruvannamalai Hills in Tamil Nadu, India.</p>

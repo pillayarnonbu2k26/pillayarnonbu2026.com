@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 description: "Frequently asked questions for Pillayar Nonbu 2026."
-ogImage: "/assets/images/ganesha-2026.png"
+ogImage: "assets/images/ganesha-2026.png"
 draft: true
 hero:
   title: "FAQ"
