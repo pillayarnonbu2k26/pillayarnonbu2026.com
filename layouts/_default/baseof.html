@@ -10,7 +10,7 @@
     <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
     <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-    <meta property="og:image" content="{{ absURL (.Params.ogImage | default "/assets/images/ganesha-2026.png") }}">
+    <meta property="og:image" content="{{ absURL (.Params.ogImage | default "assets/images/ganesha-2026.png") }}">
     <meta property="og:url" content="{{ .Permalink }}">
     <link rel="stylesheet" href="{{ "assets/css/styles.css" | relURL }}">
     {{ block "head" . }}{{ end }}
