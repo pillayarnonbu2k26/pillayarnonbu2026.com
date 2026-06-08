@@ -1,0 +1,16 @@
+{{ define "head" }}
+  {{ with .Params.event }}
+    <script type="application/ld+json">
+      {{ dict "@context" "https://schema.org" "@type" "Event" "name" $.Title "description" $.Description "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode" "eventStatus" "https://schema.org/EventScheduled" "organizer" (dict "@type" "Organization" "name" "Pillayar Nonbu 2026 Organizers") | jsonify | safeJS }}
+    </script>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  <div id="content">
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

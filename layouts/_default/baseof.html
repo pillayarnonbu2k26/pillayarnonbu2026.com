@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+    <meta property="og:image" content="{{ absURL (.Params.ogImage | default "/assets/images/ganesha-2026.png") }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <link rel="stylesheet" href="{{ "assets/css/styles.css" | relURL }}">
+    {{ block "head" . }}{{ end }}
+  </head>
+  <body class="landing-page wsite-theme-light">
+    <div id="wrapper">
+      <div id="wrap">
+        <div id="wrap-in">
+          <div id="main-wrap">
+            <div id="nav-wrap">
+              <div id="page">
+                <nav id="topnav" aria-label="Primary navigation">
+                  <ul class="wsite-menu-default">
+                    {{ range site.Menus.main }}
+                      <li{{ if $.IsMenuCurrent "main" . }} id="active"{{ end }}>
+                        <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                  <div style="clear: both;"></div>
+                </nav>
+              </div>
+            </div>
+
+            <div id="page">
+              <div id="main-bot">
+                <div id="main-inner">
+                  <div id="main">
+                    {{ block "main" . }}{{ end }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-wrap">
+      <div id="page">
+        <div id="footer">
+          <div class="wsite-elements wsite-footer">
+            <div class="paragraph" style="text-align:center;">&copy; 2026 Pillayar Nonbu 2026 organizers. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

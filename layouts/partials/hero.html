@@ -1,0 +1,25 @@
+{{ with .Params.hero }}
+  <div id="banner">
+    <div id="banner-outer">
+      <div id="banner-inner">
+        <div id="bannerleft">
+          <div class="wsite-header" role="img" aria-label="{{ .alt }}"></div>
+        </div>
+        <div id="bannerright" class="landing-banner-outer">
+          <div class="landing-banner-mid">
+            <div class="landing-banner-inner">
+              <h1 id="page-title">{{ .title | safeHTML }}</h1>
+              {{ with .text }}<p>{{ . | safeHTML }}</p>{{ end }}
+              {{ with .button }}
+                <a class="wsite-button wsite-button-large wsite-button-highlight" href="{{ .href | safeURL }}">
+                  <span class="wsite-button-inner">{{ .label }}</span>
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+{{ end }}

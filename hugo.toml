@@ -1,0 +1,17 @@
+baseURL = "https://pillayarnonbu2026.com/"
+languageCode = "en-us"
+title = "Pillayar Nonbu 2026"
+enableRobotsTXT = true
+uglyURLs = true
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+description = "Pillayar Nonbu 2026 event website with Pillayar Nonbu information for the Nagarathar community."
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[[menus.main]]
+name = "Pillayar Nonbu"
+pageRef = "/pillayar-nonbu-2026"
+weight = 20

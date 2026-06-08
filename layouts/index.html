@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  <div id="content">
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}
