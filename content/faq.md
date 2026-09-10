@@ -5,24 +5,14 @@ ogImage: "assets/images/ganesha-2026.png"
 draft: false
 hero:
   title: "Frequently Asked Questions"
-  text: "Find answers to public event questions and private organizer guidelines."
+  text: "Find answers to common questions about Pillayar Nonbu 2026."
   image: "/assets/images/ganesha-2026.png"
   alt: "Traditional Pillayar Nonbu celebration setting"
 ---
 
 <section class="content-section">
 <div class="faq-container">
-<div class="faq-tabs" role="tablist" aria-label="FAQ Filters">
-<button type="button" class="faq-tab active" data-tab="public" role="tab" aria-selected="true" id="tab-public">
-<span class="tab-icon">🌐</span> Public FAQ
-</button>
-<button type="button" class="faq-tab" data-tab="private" role="tab" aria-selected="false" id="tab-private">
-<span class="tab-icon">🔒</span> Private FAQ
-</button>
-</div>
-
-<!-- Public FAQs -->
-<div class="faq-group public-group active" id="group-public" role="tabpanel" aria-labelledby="tab-public">
+<div class="faq-group public-group">
 <div class="faq-card">
 <h3>What is Pillayar Nonbu?</h3>
 <p>Pillayar Nonbu is a sacred festival celebrated annually by the Nattukottai Nagarathar (Chettinad) community, honoring Lord Pillayar (Ganesha) with prayers, fasting, and community gathering.</p>
@@ -48,63 +38,5 @@ hero:
 <p>Event announcements and schedules are published on this website and sent out via our community email newsletters.</p>
 </div>
 </div>
-
-<!-- Private FAQs -->
-<div class="faq-group private-group" id="group-private" role="tabpanel" aria-labelledby="tab-private" style="display: none;">
-<div class="faq-notice">
-<span class="lock-badge">🔒 Private / Internal Guidelines</span>
-<p>These guidelines are intended for organizing host families, volunteers, and registered attendees.</p>
-</div>
-
-<div class="faq-card private-card">
-<h3>How does the Yelam (Auction) process work?</h3>
-<p>The Yelam item collection and bidding proceeds directly support community causes (NSNA & NCNA funds). Items should be tagged and submitted to the auction committee prior to the start of the puja.</p>
-</div>
-
-<div class="faq-card private-card">
-<h3>What are the host family setup responsibilities?</h3>
-<p>Host families should arrive by 12:30 PM to set up puja items, seating arrangements, and food service stations before doors open at 2:00 PM.</p>
-</div>
-
-<div class="faq-card private-card">
-<h3>How are food prep and prasadam distributed?</h3>
-<p>All food prep items are managed by the food committee. Prasadam and Nonbu Elai distribution will follow the puja rituals around 7:30 PM.</p>
-</div>
-
-<div class="faq-card private-card">
-<h3>Who do I contact for venue access & emergency support?</h3>
-<p>Host leads and committee members can reach the logistics team at <a href="mailto:pillayarnonbu2k26@gmail.com">pillayarnonbu2k26@gmail.com</a> or via the internal organizing chat group.</p>
-</div>
-</div>
 </div>
 </section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const tabs = document.querySelectorAll('.faq-tab');
-  const groups = document.querySelectorAll('.faq-group');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      const target = this.getAttribute('data-tab');
-
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      this.classList.add('active');
-      this.setAttribute('aria-selected', 'true');
-
-      groups.forEach(group => {
-        if (group.id === 'group-' + target) {
-          group.style.display = 'block';
-          group.classList.add('active');
-        } else {
-          group.style.display = 'none';
-          group.classList.remove('active');
-        }
-      });
-    });
-  });
-});
-</script>
