@@ -15,3 +15,8 @@ unsafe = true
 name = "Pillayar Nonbu"
 pageRef = "/pillayar-nonbu-2026"
 weight = 20
+
+[[menus.main]]
+name = "FAQ"
+pageRef = "/faq"
+weight = 30
