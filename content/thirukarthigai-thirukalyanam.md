@@ -6,16 +6,15 @@ event: true
 draft: false
 hero:
   title: "Thirukarthigai &amp; Thirukalyanam at Concord Temple"
-  text: "Sunday, November 29, 2026<br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
+  text: "Sunday, November 29, 2026<br><br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
   image: "/assets/images/SANKAR2_7858.jpg"
-  alt: "Thirukarthigai celebration photo"
+  alt: "Lord Murugan at Thirukarthigai Thirukalyanam"
   button:
     label: "Contact Organizers"
     href: "/faq.html"
 ---
 
-<section class="content-section two-column">
-  <img src="/assets/images/SANKAR2_7858.jpg" alt="Thirukarthigai Thirukalyanam celebration photo">
+<section class="content-section">
   <div class="tamil-event-card" lang="ta">
     <div class="tamil-event-header">
       <span class="event-badge">சிறப்பு வழிபாடு</span>

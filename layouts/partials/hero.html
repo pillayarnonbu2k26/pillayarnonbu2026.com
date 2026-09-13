@@ -3,7 +3,7 @@
     <div id="banner-outer">
       <div id="banner-inner">
         <div id="bannerleft">
-          <div class="wsite-header" role="img" aria-label="{{ .alt }}"></div>
+          <div class="wsite-header" role="img" aria-label="{{ .alt }}"{{ with .image }} style="background-image: url('{{ . | relURL }}') !important;"{{ end }}></div>
         </div>
         <div id="bannerright" class="landing-banner-outer">
           <div class="landing-banner-mid">
