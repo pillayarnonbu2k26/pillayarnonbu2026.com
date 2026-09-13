@@ -27,10 +27,6 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 <span>🔍 View Full Size</span>
 </div>
 </div>
-<div class="insta-card-actions">
-<button class="insta-btn-like" onclick="toggleLike(this)" aria-label="Like post">❤️ <span class="like-count">108</span></button>
-<span class="insta-date-tag">Saturday, Dec 19, 2026</span>
-</div>
 <div class="insta-card-caption">
 <strong>pillayarnonbu2026</strong> Save The Date! Northern California Pillayar Nonbu 2026 celebration set for Saturday, December 19, 2026.
 <div class="insta-hashtags">#PillayarNonbu2026 #SaveTheDate #Nagarathar</div>
@@ -52,10 +48,6 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 <div class="insta-overlay">
 <span>🔍 View Full Size</span>
 </div>
-</div>
-<div class="insta-card-actions">
-<button class="insta-btn-like" onclick="toggleLike(this)" aria-label="Like post">❤️ <span class="like-count">96</span></button>
-<span class="insta-date-tag">Yelam &amp; Sponsorships</span>
 </div>
 <div class="insta-card-caption">
 <strong>pillayarnonbu2026</strong> Yelam &amp; Donation Announcement for Pillayar Nonbu 2026. Devotees &amp; families are invited to participate.
@@ -79,10 +71,6 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 <span>🔍 View Full Size</span>
 </div>
 </div>
-<div class="insta-card-actions">
-<button class="insta-btn-like" onclick="toggleLike(this)" aria-label="Like post">❤️ <span class="like-count">112</span></button>
-<span class="insta-date-tag">Sunday, Nov 29, 2026</span>
-</div>
 <div class="insta-card-caption">
 <strong>pillayarnonbu2026</strong> Thirukarthigai &amp; Thirukalyanam Special Pooja at Concord Shiva Murugan Temple starting from 10:00 AM.
 <div class="insta-hashtags">#Thirukarthigai #Thirukalyanam #LordMurugan</div>
@@ -104,10 +92,6 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 <div class="insta-overlay">
 <span>🔍 View Full Size</span>
 </div>
-</div>
-<div class="insta-card-actions">
-<button class="insta-btn-like" onclick="toggleLike(this)" aria-label="Like post">❤️ <span class="like-count">124</span></button>
-<span class="insta-date-tag">Official Celebration Flyer</span>
 </div>
 <div class="insta-card-caption">
 <strong>pillayarnonbu2026</strong> Grand Pillayar Nonbu 2026 Invitation Flyer! All Chettinad Nagarathars in NorCal are warmly welcome.
@@ -142,18 +126,6 @@ function closeFlyerModal(event) {
   if (event.target === modal || event.target.classList.contains('insta-modal-close')) {
     modal.classList.remove('active');
     document.body.style.overflow = '';
-  }
-}
-
-function toggleLike(btn) {
-  var countSpan = btn.querySelector('.like-count');
-  var current = parseInt(countSpan.textContent, 10);
-  if (btn.classList.contains('liked')) {
-    btn.classList.remove('liked');
-    countSpan.textContent = current - 1;
-  } else {
-    btn.classList.add('liked');
-    countSpan.textContent = current + 1;
   }
 }
 </script>
