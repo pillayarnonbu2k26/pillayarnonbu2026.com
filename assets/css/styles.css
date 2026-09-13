@@ -484,3 +484,68 @@ body {
   border-radius: 4px;
   margin-bottom: 6px;
 }
+
+/* Formatted Tamil Event Card Styling */
+.tamil-event-card {
+  background: #faf8f6;
+  border: 1px solid #d4cbb9;
+  border-left: 5px solid #880000;
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.tamil-event-header {
+  border-bottom: 1px solid #e8e4dc;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.event-badge {
+  display: inline-block;
+  background: #da7b00;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tamil-title-main {
+  color: #880000;
+  font-family: Georgia, "Tamil MN", serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+}
+
+.tamil-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.detail-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  color: #3e382d;
+}
+
+.detail-text strong {
+  color: #880000;
+}
