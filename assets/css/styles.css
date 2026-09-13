@@ -185,15 +185,36 @@ body {
   border-bottom-color: #7a1717;
   border-top-color: #9b2a2a;
   margin: 0;
+  padding: 6px 12px;
 }
 
 #topnav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
   float: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 #topnav ul li {
   background: none;
-  min-width: 220px;
+  float: none;
+  min-width: auto;
+  margin-right: 0;
+  padding: 0;
+}
+
+#topnav a {
+  float: none;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 #topnav a[aria-current="page"] {
