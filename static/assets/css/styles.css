@@ -379,4 +379,203 @@ body {
   .float-image {
     margin: 10px auto;
   }
+
+  .faq-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .faq-tab {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* FAQ Page & Filter Tabs */
+.faq-container {
+  margin: 15px 0;
+}
+
+.faq-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #e9e1d3;
+  padding-bottom: 12px;
+}
+
+.faq-tab {
+  background: #faf8f6;
+  border: 1px solid #d4cbb9;
+  border-radius: 6px;
+  color: #827762;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq-tab:hover {
+  background: #f2eeea;
+  color: #880000;
+  border-color: #c4bba9;
+}
+
+.faq-tab.active {
+  background: #880000;
+  color: #ffffff;
+  border-color: #880000;
+  box-shadow: 0 2px 4px rgba(136, 0, 0, 0.2);
+}
+
+.faq-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1px solid #e9e1d3;
+  border-left: 4px solid #da7b00;
+  border-radius: 6px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.faq-card h3 {
+  color: #880000;
+  font-size: 1.25em;
+  margin-bottom: 8px;
+  font-family: "Rokkitt", Arial, Helvetica, sans-serif;
+}
+
+.faq-card p {
+  color: #554f44;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-card.private-card {
+  border-left-color: #880000;
+  background: #fffdfa;
+}
+
+.faq-notice {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.lock-badge {
+  display: inline-block;
+  background: #880000;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/* Formatted Tamil Event Card Styling */
+.tamil-event-card {
+  background: #faf8f6;
+  border: 1px solid #d4cbb9;
+  border-left: 5px solid #880000;
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.tamil-event-header {
+  border-bottom: 1px solid #e8e4dc;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.event-badge {
+  display: inline-block;
+  background: #da7b00;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.tamil-title-main {
+  color: #880000;
+  font-family: Georgia, "Tamil MN", serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+}
+
+.tamil-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.detail-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.detail-text {
+  color: #3e382d;
+}
+
+.detail-text strong {
+  color: #880000;
+}
+
+/* Thirukarthigai Thirukalyanam Page - Murugan Image Resized (+1/3) */
+@media screen and (min-width: 768px) {
+  .page-thirukarthigai-thirukalyanam .landing-page .wsite-header,
+  .page-thirukarthigai-thirukalyanam #bannerleft .wsite-header {
+    width: 658px;
+    height: 497px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerleft {
+    width: 658px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerright {
+    width: 224px;
+    height: 497px;
+    padding: 0 15px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerright h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-thirukarthigai-thirukalyanam .wsite-header {
+    height: 280px;
+  }
 }

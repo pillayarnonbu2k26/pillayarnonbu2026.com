@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ "assets/css/styles.css" | relURL }}">
     {{ block "head" . }}{{ end }}
   </head>
-  <body class="landing-page wsite-theme-light">
+  <body class="landing-page wsite-theme-light{{ with .File }} page-{{ .TranslationBaseName }}{{ end }}">
     <div id="wrapper">
       <div id="wrap">
         <div id="wrap-in">

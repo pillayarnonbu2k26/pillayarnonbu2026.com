@@ -549,3 +549,33 @@ body {
 .detail-text strong {
   color: #880000;
 }
+
+/* Thirukarthigai Thirukalyanam Page - Murugan Image Resized (+1/3) */
+@media screen and (min-width: 768px) {
+  .page-thirukarthigai-thirukalyanam .landing-page .wsite-header,
+  .page-thirukarthigai-thirukalyanam #bannerleft .wsite-header {
+    width: 658px;
+    height: 497px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerleft {
+    width: 658px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerright {
+    width: 224px;
+    height: 497px;
+    padding: 0 15px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerright h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-thirukarthigai-thirukalyanam .wsite-header {
+    height: 280px;
+  }
+}
