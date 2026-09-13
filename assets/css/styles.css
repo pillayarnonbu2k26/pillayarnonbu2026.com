@@ -240,7 +240,10 @@ body {
 }
 
 .landing-page .wsite-header {
-  background: #faf8f6 url(../images/ganesha-2026.png) center center no-repeat !important;
+  background-color: #faf8f6;
+  background-image: url(../images/ganesha-2026.png);
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: contain !important;
 }
 
@@ -584,8 +587,10 @@ body {
   .page-thirukarthigai-thirukalyanam #bannerleft .wsite-header {
     width: 340px;
     height: 480px;
+    background-image: url('/assets/images/SANKAR2_7858.jpg') !important;
     background-size: contain !important;
     background-position: center center !important;
+    background-repeat: no-repeat !important;
   }
 
   .page-thirukarthigai-thirukalyanam #bannerright {
