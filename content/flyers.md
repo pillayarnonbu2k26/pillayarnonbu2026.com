@@ -6,7 +6,7 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 
 <div class="insta-grid-container">
 <div class="insta-grid-header">
-<h2>📸 Official Event Posters &amp; Flyers</h2>
+<h2>Official Event Posters &amp; Flyers</h2>
 <p class="muted">Click any poster to view full-size resolution.</p>
 </div>
 
