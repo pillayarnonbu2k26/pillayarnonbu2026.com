@@ -601,106 +601,129 @@ body {
   }
 }
 
-/* Instagram-Style Feed Layout */
-.insta-feed-container {
-  max-width: 580px;
+/* Instagram-Style Grid Layout */
+.insta-grid-container {
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
   padding: 10px 0 30px;
 }
 
-.insta-feed-header {
+.insta-grid-header {
   text-align: center;
   margin-bottom: 24px;
 }
 
-.insta-feed-header h2 {
+.insta-grid-header h2 {
   color: #880000;
   font-family: "Rokkitt", Georgia, serif;
   font-size: 28px;
   margin-bottom: 4px;
 }
 
-.insta-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+/* 3 in a row on browser / desktop */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 1 below another on mobile */
+@media screen and (max-width: 767px) {
+  .insta-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 .insta-card {
   background: #ffffff;
   border: 1px solid #e0d8c8;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .insta-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(136, 0, 0, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(136, 0, 0, 0.14);
 }
 
 .insta-card-header {
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   background: #faf8f6;
   border-bottom: 1px solid #f0eae0;
-  gap: 12px;
+  gap: 8px;
 }
 
 .insta-avatar {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #da7b00;
-  padding: 1px;
+  flex-shrink: 0;
 }
 
 .insta-user-info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  min-width: 0;
 }
 
 .insta-username {
   font-weight: 700;
   color: #262626;
-  font-size: 15px;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .insta-location {
-  font-size: 12px;
+  font-size: 11px;
   color: #737373;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .insta-badge {
   background: #880000;
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
-  padding: 3px 8px;
-  border-radius: 12px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
+/* Normalized Poster Image Frame */
 .insta-image-wrapper {
   position: relative;
-  background: #faf8f6;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #111111;
   cursor: pointer;
   overflow: hidden;
-  text-align: center;
 }
 
 .insta-image-wrapper img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   transition: transform 0.3s ease;
 }
 
 .insta-image-wrapper:hover img {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .insta-overlay {
@@ -709,7 +732,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -717,7 +740,7 @@ body {
   transition: opacity 0.25s ease;
   color: #ffffff;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .insta-image-wrapper:hover .insta-overlay {
@@ -728,15 +751,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px 6px;
+  padding: 8px 12px 4px;
 }
 
 .insta-btn-like {
   background: none;
   border: 1px solid #e0d8c8;
-  border-radius: 20px;
-  padding: 6px 14px;
-  font-size: 14px;
+  border-radius: 16px;
+  padding: 3px 10px;
+  font-size: 12px;
   cursor: pointer;
   color: #880000;
   font-weight: bold;
@@ -746,31 +769,31 @@ body {
 .insta-btn-like:hover, .insta-btn-like.liked {
   background: #fff0f0;
   border-color: #880000;
-  transform: scale(1.05);
 }
 
 .insta-date-tag {
-  font-size: 12px;
+  font-size: 11px;
   color: #827762;
   font-weight: 600;
 }
 
 .insta-card-caption {
-  padding: 8px 16px 16px;
-  font-size: 14px;
-  line-height: 1.5;
+  padding: 4px 12px 12px;
+  font-size: 12px;
+  line-height: 1.45;
   color: #333333;
+  flex-grow: 1;
 }
 
 .insta-card-caption strong {
   color: #880000;
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 .insta-hashtags {
-  margin-top: 6px;
+  margin-top: 4px;
   color: #00376b;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
 }
 
