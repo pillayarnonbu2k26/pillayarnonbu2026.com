@@ -2,11 +2,6 @@
 title: "Event Posters & Flyers"
 description: "Official WhatsApp posters and flyers for Northern California Pillayar Nonbu 2026 and Thirukarthigai Thirukalyanam."
 ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
-hero:
-  title: "Official Event Posters &amp; Flyers"
-  text: "Browse all official WhatsApp posters and flyers for Pillayar Nonbu 2026 &amp; Thirukarthigai Thirukalyanam."
-  image: "/assets/images/whatapp-posters/Save-The-Date.jpg"
-  alt: "Pillayar Nonbu 2026 Save The Date Flyer"
 ---
 
 <div class="insta-grid-container">
