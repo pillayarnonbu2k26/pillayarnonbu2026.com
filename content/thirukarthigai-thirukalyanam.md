@@ -1,21 +1,21 @@
 ---
 title: "Thirukarthigai Thirukalyanam"
 description: "Thirukarthigai and Thirukalyanam 2026 event information at Concord Shiva Murugan Temple."
-ogImage: "/assets/images/thirukarthigai-invite.png"
+ogImage: "/assets/images/SANKAR2_7858.jpg"
 event: true
 draft: false
 hero:
   title: "Thirukarthigai &amp; Thirukalyanam at Concord Temple"
   text: "Sunday, November 29, 2026<br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
-  image: "/assets/images/thirukarthigai-hero.jpg"
-  alt: "Traditional lithograph used for Thirukarthigai event page"
+  image: "/assets/images/SANKAR2_7858.jpg"
+  alt: "Thirukarthigai celebration photo"
   button:
     label: "Contact Organizers"
     href: "/faq.html"
 ---
 
 <section class="content-section two-column">
-  <img src="/assets/images/thirukarthigai-invite.png" alt="Thirukarthigai Thirukalyanam event artwork">
+  <img src="/assets/images/SANKAR2_7858.jpg" alt="Thirukarthigai Thirukalyanam celebration photo">
   <div class="tamil-event-card" lang="ta">
     <div class="tamil-event-header">
       <span class="event-badge">சிறப்பு வழிபாடு</span>
@@ -55,7 +55,6 @@ hero:
 </section>
 
 <section class="content-section">
-  <img class="center-image" src="/assets/images/muruga.png" alt="Lord Muruga artwork">
   <h2>Lord Muruga &amp; Significance of Periya Karthigai</h2>
   <p>Lord Muruga is most popular among Tamil people. Famously referred as Thamizh Kadavul (<span lang="ta">தமிழ் கடவுள்</span> - God of Tamils), Lord Muruga is the patron deity of the Tamil land. Like most Hindu deities, he is also known by many other names, including Senthil, Saravana, Kārtikeya, Arumugam, Shanmuga, Shadanana, Kumāra, Dhandapany, Guhan or Guruhuha, Skanda, Subrahmanya, Vēlan and Swaminatha.</p>
   <p>The Atharva Veda describes Kumaran. Chandogya Upanishad refers to Skanda as the way that leads to wisdom. The Aranya Parva canto of the Mahabharata relates the legend of Kartikeya Skanda in considerable detail. Tolkappiyam <span lang="ta">தொல்காப்பியம்</span>, possibly the most ancient of the Tamil literature, mentions him as Seyon (<span lang="ta">சேயோன்</span>). Other Sangam era works in Tamil that refer to Murugan in detail include the Paripaatal, the Akananuru and the Purananuru.</p>
