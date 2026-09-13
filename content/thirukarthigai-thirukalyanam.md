@@ -6,7 +6,7 @@ event: true
 draft: false
 hero:
   title: "Thirukarthigai &amp; Thirukalyanam at Concord Temple"
-  text: "2026 schedule to be announced<br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
+  text: "Sunday, November 29, 2026<br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
   image: "/assets/images/thirukarthigai-hero.jpg"
   alt: "Traditional lithograph used for Thirukarthigai event page"
   button:
@@ -19,8 +19,8 @@ hero:
   <div class="tamil-title" lang="ta">
     திருக்கார்த்திகை - திருக்கல்யாண வழிபாடு<br>
     கான்கார்ட் சிவா முருகன் கோவில்<br>
-    2026 தேதி விரைவில் அறிவிக்கப்படும்<br>
-    நேரம் விரைவில் அறிவிக்கப்படும்
+    ஞாயிற்றுக்கிழமை, நவம்பர் 29, 2026<br>
+    காலை 10:00 மணி முதல்
   </div>
 </section>
 
