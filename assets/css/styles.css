@@ -552,30 +552,51 @@ body {
 
 /* Thirukarthigai Thirukalyanam Page - Murugan Image Resized (+1/3) */
 @media screen and (min-width: 768px) {
-  .page-thirukarthigai-thirukalyanam .landing-page .wsite-header,
-  .page-thirukarthigai-thirukalyanam #bannerleft .wsite-header {
-    width: 658px;
-    height: 497px;
+  .page-thirukarthigai-thirukalyanam #bannerleft {
+    float: right;
+    width: 340px;
+    height: 480px;
+    border-left: 5px solid #f2eeea;
   }
 
-  .page-thirukarthigai-thirukalyanam #bannerleft {
-    width: 658px;
+  .page-thirukarthigai-thirukalyanam .landing-page .wsite-header,
+  .page-thirukarthigai-thirukalyanam #bannerleft .wsite-header {
+    width: 340px;
+    height: 480px;
+    background-size: contain !important;
+    background-position: center center !important;
   }
 
   .page-thirukarthigai-thirukalyanam #bannerright {
-    width: 224px;
-    height: 497px;
-    padding: 0 15px;
+    float: left;
+    width: 480px;
+    height: 480px;
+    padding: 0 24px;
   }
 
   .page-thirukarthigai-thirukalyanam #bannerright h1 {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  .page-thirukarthigai-thirukalyanam #bannerleft {
+    width: 100%;
+    height: 380px;
+    float: none;
+    border-left: 0;
+  }
+
   .page-thirukarthigai-thirukalyanam .wsite-header {
-    height: 280px;
+    width: 100%;
+    height: 380px;
+  }
+
+  .page-thirukarthigai-thirukalyanam #bannerright {
+    width: auto;
+    height: auto;
+    float: none;
+    padding: 20px;
   }
 }
