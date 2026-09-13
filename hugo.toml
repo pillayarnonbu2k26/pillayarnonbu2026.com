@@ -12,13 +12,13 @@ description = "Pillayar Nonbu 2026 event website with Pillayar Nonbu information
 unsafe = true
 
 [[menus.main]]
-name = "Thirukarthigai"
-pageRef = "/thirukarthigai-thirukalyanam"
+name = "Pillayar Nonbu"
+pageRef = "/pillayar-nonbu-2026"
 weight = 10
 
 [[menus.main]]
-name = "Pillayar Nonbu"
-pageRef = "/pillayar-nonbu-2026"
+name = "Thirukarthigai"
+pageRef = "/thirukarthigai-thirukalyanam"
 weight = 20
 
 [[menus.main]]
