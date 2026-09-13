@@ -22,6 +22,11 @@ pageRef = "/thirukarthigai-thirukalyanam"
 weight = 20
 
 [[menus.main]]
+name = "Flyers"
+pageRef = "/flyers"
+weight = 25
+
+[[menus.main]]
 name = "FAQ"
 pageRef = "/faq"
 weight = 30

@@ -600,3 +600,230 @@ body {
     padding: 20px;
   }
 }
+
+/* Instagram-Style Feed Layout */
+.insta-feed-container {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 10px 0 30px;
+}
+
+.insta-feed-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.insta-feed-header h2 {
+  color: #880000;
+  font-family: "Rokkitt", Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.insta-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.insta-card {
+  background: #ffffff;
+  border: 1px solid #e0d8c8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insta-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(136, 0, 0, 0.12);
+}
+
+.insta-card-header {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+  background: #faf8f6;
+  border-bottom: 1px solid #f0eae0;
+  gap: 12px;
+}
+
+.insta-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #da7b00;
+  padding: 1px;
+}
+
+.insta-user-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.insta-username {
+  font-weight: 700;
+  color: #262626;
+  font-size: 15px;
+}
+
+.insta-location {
+  font-size: 12px;
+  color: #737373;
+}
+
+.insta-badge {
+  background: #880000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.insta-image-wrapper {
+  position: relative;
+  background: #faf8f6;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+}
+
+.insta-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.insta-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.insta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.insta-image-wrapper:hover .insta-overlay {
+  opacity: 1;
+}
+
+.insta-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 6px;
+}
+
+.insta-btn-like {
+  background: none;
+  border: 1px solid #e0d8c8;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #880000;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.insta-btn-like:hover, .insta-btn-like.liked {
+  background: #fff0f0;
+  border-color: #880000;
+  transform: scale(1.05);
+}
+
+.insta-date-tag {
+  font-size: 12px;
+  color: #827762;
+  font-weight: 600;
+}
+
+.insta-card-caption {
+  padding: 8px 16px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.insta-card-caption strong {
+  color: #880000;
+  margin-right: 6px;
+}
+
+.insta-hashtags {
+  margin-top: 6px;
+  color: #00376b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Lightbox Modal */
+.insta-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.insta-modal.active {
+  display: flex;
+}
+
+.insta-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.insta-modal-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+
+.insta-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.insta-modal-caption {
+  color: #ffffff;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
