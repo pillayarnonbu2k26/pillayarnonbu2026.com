@@ -11,7 +11,7 @@ hero:
   alt: "Lord Murugan at Thirukarthigai Thirukalyanam"
   button:
     label: "Contact Organizers"
-    href: "/faq.html"
+    href: "mailto:pillayarnonbu2k26@gmail.com"
 ---
 
 <section class="content-section">

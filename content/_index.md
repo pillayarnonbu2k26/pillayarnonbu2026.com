@@ -8,7 +8,7 @@ hero:
   image: "/assets/images/ganesha-2026.png"
   alt: "Traditional Pillayar Nonbu celebration setting"
   button:
-    label: "By Invitation Only"
+    label: "Contact Organizers"
     href: "mailto:pillayarnonbu2k26@gmail.com"
 ---
 
