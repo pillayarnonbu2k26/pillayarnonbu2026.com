@@ -61,9 +61,9 @@ New or relocating Nagarathar families can reach out to <a href="mailto:pillayarn
 </div>
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
-<li>Overseas printing, tariffs, and shipping costs have increased significantly, approximately reaching ₹325,000 INR (~$3,421 USD at ₹95/$1) for printing and freight. Accommodating this major expense alongside the work involved in bulk food preparation creates significant overhead for the organizers.</li>
+<li>Overseas printing, tariffs, and shipping costs have increased significantly, approximately reaching ₹325,000 INR (~$3,421 USD at ₹95/$1) for printing and freight. Accommodating this major expense alongside the work involved in bulk food preparation creates significant overhead for the organizers and will also increase the registration cost.</li>
 <li>We're moving to a more sustainable model by transitioning to NCNA’s official digital address book initiative (web and mobile app), allowing families to keep their profile updated securely (<a href="https://ab.encna.org" target="_blank">https://ab.encna.org</a>).</li>
-<li>Built with paid service partners, the app will adhere to industry security standards verified by software engineering professionals. We will ensure explicit consent is required from every member before their contact information and photo are displayed to other members.</li>
+<li>Built with paid service partners (platform), the app will adhere to industry security standards verified by software engineering professionals. We will ensure explicit consent is required from every member before their contact information and photo are displayed to other members.</li>
 </ul>
 </div>
 </div>
@@ -78,7 +78,7 @@ New or relocating Nagarathar families can reach out to <a href="mailto:pillayarn
 </div>
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
-<li>The event is completely non-profit and 100% self-funded through attendee registration fees, with the six host families pooling initial personal funds independently.</li>
+<li>The event is 100% self-funded through attendee registration fees, with the six host families pooling initial personal funds independently.</li>
 <li>Organizers budget responsibly to avoid collecting surplus funds. If and any remaining balance at the end of the event will be fully transferred to the subsequent year's host committee.</li>
 <li>No organizational funding or reimbursements are accepted or used for Pillaiyar Nonbu 2026 event.</li>
 </ul>
