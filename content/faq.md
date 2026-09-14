@@ -290,13 +290,13 @@ Donating an item allows another family to <strong>participate in this meaningful
 
 <div class="faq-item" onclick="toggleFaqItem(this)">
 <div class="faq-question">
-<span>Why are temples on the list of Yelam beneficiaries, and what is the future outlook?</span>
+<span>How were the Yelam beneficiary options established?</span>
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
-<li><strong>Current Policy:</strong> Looking at past years (such as 2025), donors have significantly contributed to both Nagarathar causes and local temples. While local temples may not be directly Nagarathar causes, the organizing team is keeping the established list of beneficiaries to maintain community harmony. Donors are 100% free to choose any beneficiary, and organizers will not influence anyone's decision.</li>
-<li><strong>Future Outlook:</strong> The Pillayar Nonbu 2026 organizing team maintains complete neutrality and has no bias toward any specific beneficiary. Recognizing that formal guidelines are needed for long-term clarity, moving forward under NCNA leadership—working together with the local community through surveys and feedback—clear guidelines can be established for future committees to assist in managing event scale and guiding Yelam proceeds.</li>
+<li><strong>Current Policy:</strong> Looking at past years (such as 2025), donors have meaningfully contributed to both broader Nagarathar initiatives and local community causes. To honor established traditions, the organizing team maintains the established list of designated beneficiaries. Donors are 100% free to choose any beneficiary, and organizers will not influence anyone's decision.</li>
+<li><strong>Future Outlook:</strong> The Pillayar Nonbu 2026 organizing team maintains complete neutrality and has no bias toward any specific beneficiary. Recognizing that formal guidelines provide long-term clarity, moving forward under NCNA leadership—working together with the local community through surveys and feedback—clear guidelines can be established for future committees to assist in managing event scale and guiding Yelam proceeds.</li>
 </ul>
 </div>
 </div>
