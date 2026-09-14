@@ -125,7 +125,11 @@ Information to come.
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Information to come.
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Personal Attire &amp; Dedication:</strong> Hosting Pillaiyar Nonbu is a deeply meaningful honor for the six host families. To celebrate this togetherness, the families personally fund their matching traditional attire (Aachis' sarees and Annans' veshti &amp; shirts) out of pocket, alongside the countess hours spent bonding and planning.</li>
+<li><strong>Full Concord Temple Sponsorship:</strong> By community tradition, the six host families personally sponsor 100% of the Thirukarthigai &amp; Thirukalyanam event at Concord Temple—covering all pooja materials, prasadam, and temple charges.</li>
+<li><strong>Heartfelt Return Gifts:</strong> In the spirit of Nagarathar hospitality, the host families personally fund a memorable return gift and goodie bag for every attending family, ensuring no guest walks away without a token of our appreciation.</li>
+</ul>
 </div>
 </div>
 </div>
