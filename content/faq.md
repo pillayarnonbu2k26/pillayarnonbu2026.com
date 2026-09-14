@@ -10,6 +10,7 @@ draft: false
 <button class="faq-tab active" onclick="switchFaqTab(this, 'panel-general')" role="tab" aria-selected="true">General</button>
 <button class="faq-tab" onclick="switchFaqTab(this, 'panel-finances')" role="tab" aria-selected="false">Finances</button>
 <button class="faq-tab" onclick="switchFaqTab(this, 'panel-food')" role="tab" aria-selected="false">Food</button>
+<button class="faq-tab" onclick="switchFaqTab(this, 'panel-yelam')" role="tab" aria-selected="false">Yelam</button>
 </div>
 
 <!-- Panel: General -->
@@ -224,6 +225,114 @@ Based on feedback from the last community survey, the organizers chose Option C 
 <li>Food volunteers receive a full discount on the food portion of their registration fee. 🎉</li>
 <li>Kitchen volunteer spots are capped, so early signup is highly encouraged! ⚡</li>
 <li>It is so much fun to come &amp; cook together, meet people, and support the community! 🤝</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Panel: Yelam -->
+<div class="faq-panel hidden" id="panel-yelam">
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>Why should I participate and take home an item from the Yelam?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+Nagarathar Yelam is more than an auction—it is a traditional Chettinad custom connected with faith, prayer, and auspiciousness. Items are offered in worship to Pillayar first, and taking one home is traditionally believed to bring divine blessings and help fulfill a sincere prayer or wish (for example, a family praying for a child bidding on a child’s traditional dress, or praying for marriage and auspicious family milestones). The true value lies in the sacred faith and sentiment associated with the item, not its material worth. Prior to the event, the organizing team will send out a detailed document listing all available Yelam items along with their spiritual significance.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>Why should I donate or sponsor an item for the Yelam?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+Donating an item allows another family to participate in this meaningful tradition and carry a prayerful sentiment into their home. In some families, once a prayer is fulfilled, the item is lovingly returned to the Yelam in a subsequent year. Your donated item becomes part of the Yelam, and proceeds support the community's religious, cultural, or charitable activities—creating a continuous tradition of faith, participation, and community support.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>What items were sponsored from the community?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<em>The list of sponsored items will be updated as community contributions are confirmed.</em>
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>What is the role of Pillayar Nonbu organizers in the Yelam?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Facilitation &amp; Coordination:</strong> Organizers facilitate the auction process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers.</li>
+<li><strong>Zero Fund Retention:</strong> Organizers <strong>do not retain or manage any donation funds</strong> for event operations.</li>
+</ul>
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>What charitable organizations can I contribute to?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Established Beneficiary List:</strong> Similar to last year, the PN 2026 team maintains the established list of designated charitable options (including <strong>NSNA</strong>, <strong>NCNA</strong>, and <strong>local community beneficiaries</strong>).</li>
+<li><strong>100% Donor Freedom:</strong> Donors are 100% free to choose whichever organization best aligns with their personal values and giving intentions.</li>
+</ul>
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>Why are temples on the list of Yelam beneficiaries, and what is the future outlook?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Current Policy:</strong> Looking at past years (such as 2025), donors have significantly contributed to both Nagarathar causes and local temples. While local temples may not be directly Nagarathar causes, the six-member organizing committee is keeping the established list of beneficiaries to maintain community harmony and unity. Donors are 100% free to choose any beneficiary, and organizers will not influence anyone's decision.</li>
+<li><strong>Future Outlook:</strong> The Pillayar Nonbu 2026 organizers maintain complete neutrality and have no bias toward any specific beneficiary. Recognizing that formal guidelines are needed for long-term clarity, moving forward under NCNA leadership—working together with the local community through surveys and feedback—clear guidelines can be established for future committees to assist in managing event scale and guiding Yelam proceeds.</li>
+</ul>
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>Will any portion of my donation be funneled back for event-related expenses?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+No! California Nagarathars strongly prefer that <strong>no portion of charitable contributions be funneled back for event-related expense reimbursements</strong>. We heard you! The Pillayar Nonbu 2026 organizing team has taken proactive cost-cutting measures across all areas and will conduct this entire event <strong>without seeking any reimbursements</strong> from any organization. We take immense pride in stepping up to this milestone for our community.
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>Whom do I write checks to? And will I get a 100% tax-exempt receipt for my donation?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Check Payees:</strong> Yes! You write checks <strong>payable directly to the 501(c)(3) registered non-profit organizations</strong> of your choice (limited to the available beneficiaries).</li>
+<li><strong>Tax Receipts &amp; Recognition:</strong> Official <strong>tax-deductible receipts</strong> and <strong>donor recognition</strong> will be issued directly to you by the respective organization.</li>
+</ul>
+</div>
+</div>
+
+<div class="faq-item" onclick="toggleFaqItem(this)">
+<div class="faq-question">
+<span>After the Yelam, how long do I have for remitting my payment? Can I get a company match?</span>
+<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</div>
+<div class="faq-answer">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Payment Timeline:</strong> Payments should be remitted within the timeframe communicated during the Yelam auction process (<strong>typically within 1–2 weeks</strong> following confirmation).</li>
+<li><strong>Corporate Matching:</strong> Yes! Corporate company matching is supported for eligible 501(c)(3) charitable organizations—we encourage you to check with your employer's corporate matching program to <strong>double your impact</strong>!</li>
 </ul>
 </div>
 </div>
