@@ -316,7 +316,7 @@ No! California Nagarathars strongly prefer that <strong>no portion of charitable
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
 <li><strong>Check Payees:</strong> Yes! You write checks <strong>payable directly to the 501(c)(3) registered non-profit organizations</strong> of your choice (limited to the available beneficiaries).</li>
-<li><strong>Tax Receipts &amp; Recognition:</strong> Official <strong>tax-deductible receipts</strong> and <strong>donor recognition</strong> will be issued directly to you by the respective organization.</li>
+<li><strong>Tax Receipts:</strong> Official <strong>tax-deductible receipts</strong> and <strong>donor recognition</strong> will be issued directly to you by the respective organization.</li>
 </ul>
 </div>
 </div>
