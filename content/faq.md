@@ -41,11 +41,7 @@ Following community tradition, Northern California Pillaiyar Nonbu 2026 organize
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem;">
-<li>Each year, a new set of six host families is selected by random draw during Pillaiyar Nonbu to organize the subsequent year's event.</li>
-<li>Families who have previously organized are excluded from the draw to maximize community participation — as tracked by NCNA database records dating back to 1991.</li>
-<li>A final committee of six host families was confirmed to organize Pillaiyar Nonbu 2026.</li>
-</ul>
+Each year, a new set of six host families is selected by random draw during Pillaiyar Nonbu to organize the subsequent year's event. Families who have previously organized are excluded from the draw to maximize community participation — as tracked by NCNA database records dating back to 1991. A final committee of six host families was confirmed to organize Pillaiyar Nonbu 2026.
 </div>
 </div>
 
