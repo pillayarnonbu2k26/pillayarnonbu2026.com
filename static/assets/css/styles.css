@@ -538,6 +538,8 @@ body {
 .faq-answer,
 .faq-answer p,
 .faq-answer li,
+.faq-answer strong,
+.faq-answer b,
 .faq-answer span:not(.event-badge),
 .faq-answer div:not(.event-badge) {
   color: #111111 !important;
@@ -549,7 +551,8 @@ body {
 .faq-answer strong,
 .faq-answer b {
   color: #000000 !important;
-  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700 !important;
 }
 
 .faq-answer a {
