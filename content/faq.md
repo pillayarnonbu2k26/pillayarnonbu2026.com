@@ -92,7 +92,7 @@ New or relocating Nagarathar families can reach out to <a href="mailto:pillayarn
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Detailed budget breakdowns and registration fees will be published by the host committee.
+Information to come.
 </div>
 </div>
 
@@ -102,7 +102,7 @@ Detailed budget breakdowns and registration fees will be published by the host c
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Registration costs are calculated based on fixed venue costs, food, and supply expenses divided across expected attending families.
+Information to come.
 </div>
 </div>
 
@@ -112,7 +112,7 @@ Registration costs are calculated based on fixed venue costs, food, and supply e
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Multiple banquet halls, temples, and community facilities across the Bay Area were thoroughly evaluated for capacity, availability, catering policies, and cost-effectiveness. A centrally located, spacious facility best fitting our community's needs was selected.
+Information to come.
 </div>
 </div>
 
@@ -122,7 +122,7 @@ Multiple banquet halls, temples, and community facilities across the Bay Area we
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Host organizers pool initial seed funds and volunteer personal time to execute event logistics.
+Information to come.
 </div>
 </div>
 </div>
