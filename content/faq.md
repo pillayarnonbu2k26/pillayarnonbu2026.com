@@ -268,7 +268,10 @@ Donating an item allows another family to participate in this meaningful traditi
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Organizers facilitate the auction process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers. Organizers <strong>do not retain or manage any donation funds</strong> for event operations.
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Coordination:</strong> Organizers facilitate the auction process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers.</li>
+<li><strong>Zero Fund Retention:</strong> Organizers <strong>do not retain or manage any donation funds</strong> for event operations.</li>
+</ul>
 </div>
 </div>
 
