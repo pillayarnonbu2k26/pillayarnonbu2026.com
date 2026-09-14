@@ -146,39 +146,14 @@ Information to come.
 Over the years, our community food models have evolved—moving from individual home potluck assignments (pre-2023) to full vendor catering (2023–2025). While catering offered convenience, rapidly rising commercial costs for 2026 would steeply increase attendee registration fees.
 </p>
 
-<!-- Community Survey Pie Chart Visualization -->
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 1.25rem; margin: 1rem 0 1.25rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="position: relative; width: 140px; height: 140px; flex-shrink: 0; margin: 0 auto;">
-<svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg); border-radius: 50%;">
-<circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#ffab00" stroke-width="31.83098861837908" stroke-dasharray="43.8 56.2" stroke-dashoffset="0"></circle>
-<circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#ff5630" stroke-width="31.83098861837908" stroke-dasharray="28.1 71.9" stroke-dashoffset="-43.8"></circle>
-<circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#0052cc" stroke-width="31.83098861837908" stroke-dasharray="28.1 71.9" stroke-dashoffset="-71.9"></circle>
-</svg>
-<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: #ffffff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 0 4px rgba(0,0,0,0.08);">
-<span style="font-size: 15px; font-weight: 800; color: #111111; line-height: 1;">44%</span>
-<span style="font-size: 10px; font-weight: 700; color: #111111; text-transform: uppercase; margin-top: 2px;">Hybrid</span>
-</div>
-</div>
-<div style="flex-grow: 1; min-width: 220px;">
-<div style="font-size: 12px; font-weight: 700; color: #111111; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">Community Survey Preference (192 Responses)</div>
-<div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 14.5px;">
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-<span style="display: flex; align-items: center; gap: 6px; font-weight: 600; color: #111111;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #ffab00; display: inline-block;"></span> Option C: Hybrid Model (Assigned + Bulk)</span>
-<span style="font-weight: 700; color: #111111;">43.8%</span>
-</div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-<span style="display: flex; align-items: center; gap: 6px; color: #111111;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5630; display: inline-block;"></span> Option B: 100% Catered Food</span>
-<span style="font-weight: 600; color: #111111;">28.1%</span>
-</div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
-<span style="display: flex; align-items: center; gap: 6px; color: #111111;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #0052cc; display: inline-block;"></span> Option A: 100% Volunteer Assigned</span>
-<span style="font-weight: 600; color: #111111;">28.1%</span>
-</div>
-</div>
-</div>
-</div>
+<p><strong>Community Survey Preference (192 Responses):</strong></p>
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; margin-top: 0.35rem; margin-bottom: 0.75rem;">
+<li><strong>Option C: Hybrid Model (Assigned + Bulk) — 43.8%</strong> (Selected Model)</li>
+<li><strong>Option B: 100% Catered Food — 28.1%</strong></li>
+<li><strong>Option A: 100% Volunteer Assigned — 28.1%</strong></li>
+</ul>
 
-<p style="margin-top: 0.75rem;">
+<p>
 Based on feedback from the last community survey, the organizers chose Option C being the community preference to keep costs to the minimum while preserving cultural traditions.
 </p>
 </div>
@@ -192,48 +167,11 @@ Based on feedback from the last community survey, the organizers chose Option C 
 <div class="faq-answer">
 <p style="margin-bottom: 0.75rem;">An easy to prepare menu has been put together with thoughts from organizers and volunteers stepping forward to support the hybrid food model and keeping traditions alive and meaningful.</p>
 
-<div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
-<!-- Home Prepared -->
-<div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
-Home Prepared
-</div>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
-<li>Elai Maavu</li>
-<li>Vellai Paniyaram</li>
-<li>Kandharappam</li>
-<li>Medhu Vadai</li>
-<li>Modhagam (Modhakam)</li>
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Home Prepared:</strong> Elai Maavu, Vellai Paniyaram, Kandharappam, Medhu Vadai, Modhagam (Modhakam)</li>
+<li><strong>Bulk Cooking:</strong> Idly, Sambhar, Tomato Chutney, Ven Pongal</li>
+<li><strong>Other Supplies:</strong> Coffee / Tea, Cookies (Kids) / Mixture / Juice (Kids)</li>
 </ul>
-</div>
-
-<!-- Bulk Cooking -->
-<div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
-Bulk Cooking
-</div>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
-<li>Idly</li>
-<li>Sambhar</li>
-<li>Tomato Chutney</li>
-<li>Ven Pongal</li>
-</ul>
-</div>
-
-<!-- Other Supplies -->
-<div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
-Other Supplies
-</div>
-<ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
-<li>Coffee / Tea</li>
-<li>Cookies (Kids) / Mixture / Juice (Kids)</li>
-</ul>
-</div>
-</div>
 </div>
 </div>
 
@@ -243,27 +181,11 @@ Other Supplies
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-<div style="display: flex; flex-direction: column; gap: 0.85rem;">
-<div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 14.5px; font-weight: 700; color: #000000; margin-bottom: 0.35rem;">
-Option 1: Small Group Prep (Home-Based)
-</div>
-<p style="font-size: 14.5px; color: #111111; margin: 0 0 0.4rem 0; line-height: 1.6;">
-Groups of Aachis meet in local Bay Area neighborhoods to prepare items like Kandharappam, Vellai Paniyaram, Medhu Vadai, or Modhagam. You can also volunteer to prepare and bring Elai Maavu.
-</p>
-</div>
-<div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 14.5px; font-weight: 700; color: #000000; margin-bottom: 0.35rem;">
-Option 2: Commercial Bulk Cooking &amp; Prep
-</div>
-<p style="font-size: 14.5px; color: #111111; margin: 0 0 0.4rem 0; line-height: 1.6;">
-Preparing bulk items (Idli, Sambar, Chutney, Pongal) using commercial stoves in 2–3 hour shifts at our designated kitchen facility.
-</p>
-<p style="font-size: 14.5px; color: #111111; margin: 0; line-height: 1.6;">
-<strong>Pre-Event Prep Option:</strong> You can also volunteer to chop vegetables at home on the evening before the event (pick up vegetables, chop, and bring them over).
-</p>
-</div>
-</div>
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<li><strong>Option 1: Small Group Prep (Home-Based):</strong> Groups of Aachis meet in local Bay Area neighborhoods to prepare items like Kandharappam, Vellai Paniyaram, Medhu Vadai, or Modhagam. You can also volunteer to prepare and bring Elai Maavu.</li>
+<li><strong>Option 2: Commercial Bulk Cooking &amp; Prep:</strong> Preparing bulk items (Idli, Sambar, Chutney, Pongal) using commercial stoves in 2–3 hour shifts at our designated kitchen facility.</li>
+<li><strong>Pre-Event Prep Option:</strong> You can also volunteer to chop vegetables at home on the evening before the event (pick up vegetables, chop, and bring them over).</li>
+</ul>
 </div>
 </div>
 
@@ -273,7 +195,7 @@ Preparing bulk items (Idli, Sambar, Chutney, Pongal) using commercial stoves in 
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-<ul style="margin-top: 0.5rem; margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
+<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
 <li>Food volunteers receive a full discount on the food portion of their registration fee. 🎉</li>
 <li>Kitchen volunteer spots are capped, so early signup is highly encouraged! ⚡</li>
 <li>It is so much fun to come &amp; cook together, meet people, and support the community! 🤝</li>
