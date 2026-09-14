@@ -238,7 +238,7 @@ Based on feedback from the last community survey, the organizers chose Option C 
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-Nagarathar Yelam is more than an auction—it is a <strong>traditional Chettinad custom connected with faith, prayer, and auspiciousness</strong>. Items are offered in worship to Pillayar first, and taking one home is traditionally believed to <strong>bring divine blessings and help fulfill a sincere prayer or wish</strong> (for example, a family praying for a child bidding on a child’s traditional dress, or praying for marriage and auspicious family milestones). The true value lies in the <strong>sacred faith and sentiment</strong> associated with the item, not its material worth. Prior to the event, the organizing team will send out a detailed document listing all available Yelam items along with their spiritual significance.
+Nagarathar Yelam is a <strong>traditional Chettinad custom connected with faith, prayer, and auspiciousness</strong>. Items are offered in worship to Pillayar first, and taking one home is traditionally believed to <strong>bring divine blessings and help fulfill a sincere prayer or wish</strong> (for example, a family praying for a child bidding on a child’s traditional dress, or praying for marriage and auspicious family milestones). The true value lies in the <strong>sacred faith and sentiment</strong> associated with the item, not its material worth. Prior to the event, the organizing team will send out a detailed document listing all available Yelam items along with their spiritual significance.
 </div>
 </div>
 
@@ -269,7 +269,7 @@ Donating an item allows another family to <strong>participate in this meaningful
 </div>
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
-<li><strong>Coordination:</strong> Organizers facilitate the auction process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers.</li>
+<li><strong>Coordination:</strong> Organizers facilitate the Yelam process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers.</li>
 <li><strong>Zero Fund Retention:</strong> Organizers <strong>do not retain or manage any donation funds</strong> for event operations.</li>
 </ul>
 </div>
@@ -331,7 +331,7 @@ No! California Nagarathars strongly prefer that <strong>no portion of charitable
 </div>
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
-<li><strong>Payment Timeline:</strong> Payments should be remitted within the timeframe communicated during the Yelam auction process (<strong>generally within 1–3 weeks</strong> following confirmation).</li>
+<li><strong>Payment Timeline:</strong> Payments should be remitted within the timeframe communicated during the Yelam process (<strong>generally within 1–3 weeks</strong> following confirmation).</li>
 <li><strong>Corporate Matching:</strong> Yes! Corporate company matching is supported for eligible 501(c)(3) charitable organizations—we encourage you to check with your employer's corporate matching program to <strong>double your impact</strong>!</li>
 </ul>
 </div>
