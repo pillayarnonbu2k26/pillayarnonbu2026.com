@@ -542,8 +542,8 @@ body {
 .faq-answer div:not(.event-badge) {
   color: #111111 !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: 14.5px !important;
+  line-height: 1.6 !important;
 }
 
 .faq-answer strong,
