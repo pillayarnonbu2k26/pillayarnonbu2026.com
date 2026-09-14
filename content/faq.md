@@ -113,7 +113,7 @@ Information to come.
 <div class="faq-answer">
 <ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
 <li><strong>Selected Venue:</strong> A familiar, centrally located Bay Area facility was secured at <strong>$9,100</strong> through community negotiations—much lower compared to previous years.</li>
-<li><strong>Thorough Evaluation &amp; Comparisons:</strong> The organizers evaluated multiple Bay Area options (temples, banquet halls, event centers, and schools). Alternatives ranged significantly in price (quotes reaching up to <strong>$23,100+</strong>) or had strict restrictions like early 7:00 PM cutoffs and 100% upfront payment demands.</li>
+<li><strong>Evaluation &amp; Comparisons:</strong> The organizers evaluated multiple Bay Area options (temples, banquet halls, event centers, and schools). Alternatives ranged significantly in price (quotes reaching up to <strong>$23,100+</strong>) or had strict restrictions like early 7:00 PM cutoffs and 100% upfront payment demands.</li>
 <li><strong>Full Transparency:</strong> Specific venue names and detailed cost comparison spreadsheets are available upon request to the organizers.</li>
 </ul>
 </div>
