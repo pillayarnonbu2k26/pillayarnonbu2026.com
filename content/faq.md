@@ -195,8 +195,8 @@ Based on feedback from the last community survey, the organizers chose Option C 
 <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 0.5rem;">
 <!-- Home Prepared -->
 <div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 13px; font-weight: 700; color: #d97706; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #d97706; display: inline-block;"></span>
+<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
 Home Prepared
 </div>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
@@ -210,8 +210,8 @@ Home Prepared
 
 <!-- Bulk Cooking -->
 <div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 13px; font-weight: 700; color: #0284c7; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #0284c7; display: inline-block;"></span>
+<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
 Bulk Cooking
 </div>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
@@ -224,8 +224,8 @@ Bulk Cooking
 
 <!-- Other Supplies -->
 <div style="background: #ffffff; border: 1px solid #dfe1e6; border-radius: 8px; padding: 0.85rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-<div style="font-size: 13px; font-weight: 700; color: #475569; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
-<span style="width: 8px; height: 8px; border-radius: 50%; background: #475569; display: inline-block;"></span>
+<div style="font-size: 14.5px; font-weight: 700; color: #000000; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 6px;">
+<span style="width: 8px; height: 8px; border-radius: 50%; background: #111111; display: inline-block;"></span>
 Other Supplies
 </div>
 <ul style="margin: 0; padding-left: 1.25rem; font-size: 14.5px; color: #111111; display: flex; flex-direction: column; gap: 0.2rem;">
