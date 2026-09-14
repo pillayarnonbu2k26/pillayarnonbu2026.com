@@ -268,10 +268,7 @@ Donating an item allows another family to <strong>participate in this meaningful
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
-<ul style="margin-left: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem;">
-<li><strong>Coordination:</strong> Organizers facilitate the Yelam process, drive the item sponsorship drive, coordinate item collection, and provide <strong>transparent tracking</strong> of pledges and transfers.</li>
-<li><strong>Zero Fund Retention:</strong> Organizers <strong>do not retain or manage any donation funds</strong> for event operations.</li>
-</ul>
+Organizers facilitate the entire Yelam process—raising money for charitable causes, conducting the item sponsorship drive, procuring mangala items, coordinating item collection, and providing <strong>transparent tracking of pledges and transfers</strong> to organizations while maintaining thorough records. The organizing team <strong>does not retain or manage any donation funds</strong> for event operations.
 </div>
 </div>
 
