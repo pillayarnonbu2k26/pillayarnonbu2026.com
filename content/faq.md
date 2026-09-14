@@ -202,7 +202,7 @@ Based on feedback from the last community survey, the organizers chose Option C 
 
 <div class="faq-item" onclick="toggleFaqItem(this)">
 <div class="faq-question">
-<span>How can one volunteer for food preparation?</span>
+<span>How can I volunteer for food preparations?</span>
 <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </div>
 <div class="faq-answer">
