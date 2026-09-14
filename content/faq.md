@@ -10,7 +10,6 @@ draft: false
 <button class="faq-tab active" onclick="switchFaqTab(this, 'panel-general')" role="tab" aria-selected="true">General</button>
 <button class="faq-tab" onclick="switchFaqTab(this, 'panel-finances')" role="tab" aria-selected="false">Finances</button>
 <button class="faq-tab" onclick="switchFaqTab(this, 'panel-food')" role="tab" aria-selected="false">Food</button>
-<button class="faq-tab" onclick="switchFaqTab(this, 'panel-yelam')" role="tab" aria-selected="false">Yelam</button>
 </div>
 
 <!-- Panel: General -->
@@ -275,28 +274,6 @@ Preparing bulk items (Idli, Sambar, Chutney, Pongal) using commercial stoves in 
 </div>
 </div>
 
-<!-- Panel: Yelam -->
-<div class="faq-panel hidden" id="panel-yelam">
-<div class="faq-item" onclick="toggleFaqItem(this)">
-<div class="faq-question">
-<span>How does the Silver Yelam (Auction) sponsorship work?</span>
-<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</div>
-<div class="faq-answer">
-Families can sponsor silver auction articles—either by donating items with personal family significance or sponsoring specific ritual items (such as Kuthu Vilakku)—to bridge budget gaps anonymously while preserving tradition.
-</div>
-</div>
-
-<div class="faq-item" onclick="toggleFaqItem(this)">
-<div class="faq-question">
-<span>What is the policy for soliciting ritual and temple item sponsorships?</span>
-<svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-</div>
-<div class="faq-answer">
-Organizers must clarify requirements with donors to accept only items they willingly offer to sponsor, avoiding steering or forcing donors into purchasing expensive items out of pocket.
-</div>
-</div>
-</div>
 </div>
 
 <script>
