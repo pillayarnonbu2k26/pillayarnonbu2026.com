@@ -6,7 +6,7 @@ event: true
 draft: false
 hero:
   title: "Thirukarthigai &amp; Thirukalyanam at Concord Temple"
-  text: "Sunday, November 29, 2026<br><br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
+  text: "Sunday, November 29th, 2026<br><br>The Shiva Murugan Temple<br>1803 2nd St Concord, CA 94519"
   image: "/assets/images/SANKAR2_7858.jpg"
   alt: "Lord Murugan at Thirukarthigai Thirukalyanam"
   button:

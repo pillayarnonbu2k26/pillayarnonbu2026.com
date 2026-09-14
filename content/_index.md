@@ -4,7 +4,7 @@ description: "Pillayar Nonbu 2026 event information and background for the Nagar
 ogImage: "assets/images/ganesha-2026.png"
 hero:
   title: "Pillayar<br>Nonbu 2026"
-  text: "Saturday, December 19, 2026<br>2 PM to 9:30 PM"
+  text: "Saturday, December 19th, 2026<br>2 PM to 9:30 PM"
   image: "/assets/images/ganesha-2026.png"
   alt: "Traditional Pillayar Nonbu celebration setting"
   button:
@@ -14,7 +14,7 @@ hero:
 
 <section class="content-section">
   <h2 class="tamil-title" lang="ta">பிள்ளையார் நோன்பு</h2>
-  <p>San Francisco bay area based Nagarathars will celebrate Pillayar Nonbu on <strong>Saturday, December 19, 2026</strong>.</p>
+  <p>San Francisco bay area based Nagarathars will celebrate Pillayar Nonbu on <strong>Saturday, December 19th, 2026</strong>.</p>
   <p>If you require any further info, please email event organizers at <a href="mailto:pillayarnonbu2k26@gmail.com">pillayarnonbu2k26@gmail.com</a>.</p>
 </section>
 

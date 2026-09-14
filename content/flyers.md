@@ -28,7 +28,7 @@ ogImage: "/assets/images/whatapp-posters/Save-The-Date.jpg"
 </div>
 </div>
 <div class="insta-card-caption">
-<strong>pillayarnonbu2026</strong> Save The Date! Northern California Pillayar Nonbu 2026 celebration set for Saturday, December 19, 2026.
+<strong>pillayarnonbu2026</strong> Save The Date! Northern California Pillayar Nonbu 2026 celebration set for Saturday, December 19th, 2026.
 <div class="insta-hashtags">#PillayarNonbu2026 #SaveTheDate #Nagarathar</div>
 </div>
 </article>
