@@ -25,8 +25,3 @@ weight = 20
 name = "Flyers"
 pageRef = "/flyers"
 weight = 25
-
-[[menus.main]]
-name = "FAQ"
-pageRef = "/faq"
-weight = 30
