@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pillayar Nonbu 2026 — Organizer Task Assignments</title>
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --card: #ffffff;
+      --border: #d8cfc4;
+      --text: #1f1b18;
+      --muted: #645c54;
+      --accent: #7a2e22;
+      --gold: #b9822f;
+      --f1: #fdf2e9; --f1-h: #b45309;
+      --f2: #eef6ff; --f2-h: #1d4ed8;
+      --f3: #eefaf2; --f3-h: #15803d;
+      --f4: #f5f0ff; --f4-h: #6d28d9;
+      --f5: #fff0f5; --f5-h: #be185d;
+      --f6: #ecfeff; --f6-h: #0e7490;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.38;
+      padding: 16px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 20px;
+      color: var(--accent);
+    }
+    .header .meta {
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .section-banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-banner span.sub {
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: none;
+      opacity: 0.9;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 98px repeat(6, minmax(155px, 1fr));
+      border: 1px solid var(--border);
+      border-top: none;
+      background: var(--card);
+      margin-bottom: 20px;
+    }
+
+    .cell {
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 7px 8px;
+      vertical-align: top;
+    }
+    .cell:nth-child(7n) { border-right: none; }
+
+    .col-header {
+      font-weight: 700;
+      font-size: 12px;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .col-header small {
+      display: block;
+      font-weight: 400;
+      font-size: 10.5px;
+      opacity: 0.92;
+      margin-top: 2px;
+    }
+    .h-time { background: #3b332e; }
+    .h-f1 { background: var(--f1-h); }
+    .h-f2 { background: var(--f2-h); }
+    .h-f3 { background: var(--f3-h); }
+    .h-f4 { background: var(--f4-h); }
+    .h-f5 { background: var(--f5-h); }
+    .h-f6 { background: var(--f6-h); }
+
+    .time-cell {
+      background: #f3efe9;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 11.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .time-cell .tag {
+      margin-top: 4px;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #4a423b;
+      background: #e5ddd2;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .bg-f1 { background: var(--f1); }
+    .bg-f2 { background: var(--f2); }
+    .bg-f3 { background: var(--f3); }
+    .bg-f4 { background: var(--f4); }
+    .bg-f5 { background: var(--f5); }
+    .bg-f6 { background: var(--f6); }
+
+    ul {
+      padding-left: 14px;
+      margin: 0;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    li:last-child { margin-bottom: 0; }
+
+    .badge {
+      display: inline-block;
+      font-size: 9.5px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .b-decor { background: #fde68a; color: #78350f; }
+    .b-bhajan { background: #cffafe; color: #155e75; }
+    .b-reg { background: #dbeafe; color: #1e40af; }
+    .b-kids { background: #dcfce7; color: #166534; }
+    .b-trans { background: #ede9fe; color: #5b21b6; }
+    .b-yelam { background: #fce7f3; color: #9d174d; }
+    .b-food { background: #ffedd5; color: #9a3412; }
+    .b-done { background: #d1fae5; color: #065f46; }
+
+    .bottom-section {
+      page-break-before: always;
+    }
+
+    .pre-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(165px, 1fr));
+      border: 1px solid var(--border);
+      border-top: none;
+      background: var(--card);
+      margin-bottom: 14px;
+    }
+
+    .pre-col {
+      border-right: 1px solid var(--border);
+      padding: 8px;
+    }
+    .pre-col:last-child { border-right: none; }
+
+    .pre-col h3 {
+      font-size: 11.5px;
+      text-transform: uppercase;
+      margin: 8px 0 4px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent);
+    }
+    .pre-col h3:first-child { margin-top: 0; }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+    .checklist input[type="checkbox"] {
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .logistics-box {
+      border: 2px solid var(--gold);
+      background: #fffdf7;
+      border-radius: 4px;
+      padding: 10px 12px;
+    }
+    .logistics-box h2 {
+      font-size: 13px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #eadcc5;
+      padding-bottom: 4px;
+    }
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 16px;
+    }
+    .logistics-grid div strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    @media print {
+      body { padding: 0; background: #fff; font-size: 10px; }
+      @page { size: landscape; margin: 0.35in; }
+      .col-header { position: static; }
+      .bottom-section { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Pillayar Nonbu — Organizer Task Assignments</h1>
+    <div class="meta">6 Families &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
+  </div>
+
+  <!-- ==================== TOP PORTION ==================== -->
+  <div class="section-banner">
+    <span>Top Portion — Event-Day Schedule (10:00 AM – 9:30 PM)</span>
+    <span class="sub">10–2pm: Decoration &nbsp;|&nbsp; 2–4pm &nbsp;|&nbsp; 4–6:30pm: Kids Activities &amp; Registration &nbsp;|&nbsp; 6:30–7:30pm: Transitions &amp; Next Year Draw &nbsp;|&nbsp; 7:30–9:30pm: Yelam</span>
+  </div>
+
+  <div class="schedule-grid">
+    <div class="cell col-header h-time">Time Slot</div>
+    <div class="cell col-header h-f1">Family #1<small>Murukappan Sekappan &amp; MuthuMeena Muthukaruppan</small></div>
+    <div class="cell col-header h-f2">Family #2<small>Senthil Kasi &amp; Abirami Viswanathan</small></div>
+    <div class="cell col-header h-f3">Family #3<small>Karthick Chockalingam &amp; Janani Muthuveerappan</small></div>
+    <div class="cell col-header h-f4">Family #4<small>Aswin Natesh Venkatesh &amp; Chitra Lakshmanan</small></div>
+    <div class="cell col-header h-f5">Family #5<small>Thiruvakarasu Ramananathan &amp; Unnamalai Valliappan Kannappan</small></div>
+    <div class="cell col-header h-f6">Family #6<small>Hariharasudahan Subramanian &amp; Srilakshmi Sethu</small></div>
+
+    <!-- 10:00 AM - 2:00 PM -->
+    <div class="cell time-cell">
+      10:00 AM<br>–<br>2:00 PM
+      <span class="tag">Decoration</span>
+    </div>
+    <div class="cell bg-f1">
+      <span class="badge b-decor">Decoration</span>
+      <ul>
+        <li>Outside Pillayar decorations.</li>
+        <li><strong>11am Coffee &amp; Tea:</strong> 70 coffee + 100 tea (volunteer pickup).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f2">
+      <ul>
+        <li>Abi to lend camera to Sruti (Chitra's cousin) to take candid photos.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f3">
+      <span class="badge b-decor">Decoration</span>
+      <ul>
+        <li>Collect stage Pillayar idol (includes Veshti &amp; Garland) — coordinate with Uma &amp; Alagu (Flowers).</li>
+        <li>Wholesale Flowers Sponsorship: Alagu (408-464-4532) for Pillayar, Poojai, and hairpins/flowers for girls.</li>
+        <li>Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f4">
+      <span class="badge b-food">Chopping / Kitchen</span>
+      <ul>
+        <li>10:00 AM: Chopping volunteers at ICC (onions, tomatoes, brinjals).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f5">
+      <ul>
+        <li>Jamkalams &amp; Tanjore painting setup (Lakshmi Palaniappan, Pleasanton Arun, Deepa Aachi).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f6">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+
+    <!-- 2:00 PM - 4:00 PM -->
+    <div class="cell time-cell">
+      2:00 PM<br>–<br>4:00 PM
+    </div>
+    <div class="cell bg-f1">
+      <span class="badge b-food">Coffee &amp; Tea</span>
+      <ul>
+        <li><strong>3pm Coffee &amp; Tea:</strong> 200 coffee + 400 tea.</li>
+        <li>3pm pickup: Senthamarai Kannan / Chokalingam (Hari).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f2">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f3">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f4">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f5">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f6">
+      <span class="badge b-bhajan">Bhajan</span>
+      <ul>
+        <li><strong>EXECUTION: Coordinate Bhajan</strong></li>
+        <li><strong>2:30pm – 3:30pm:</strong> Adults bhajan (1 hr).</li>
+        <li><strong>3:30pm – 4:30pm:</strong> Kids bhajan (1 hr).</li>
+        <li>3pm Coffee/Tea pickup coordination (Hari).</li>
+      </ul>
+    </div>
+
+    <!-- 4:00 PM - 6:30 PM -->
+    <div class="cell time-cell">
+      4:00 PM<br>–<br>6:30 PM
+      <span class="tag">Kids &amp; Reg</span>
+    </div>
+    <div class="cell bg-f1">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f2">
+      <span class="badge b-reg">Registration (4–6pm)</span>
+      <ul>
+        <li><strong>EXECUTION: Registration (4pm to 6pm)</strong></li>
+        <li>Zelle payment received (+ Karthik Chockalingam).</li>
+        <li>Return gift.</li>
+        <li>Kids volunteer check: Sudha Vasu, Chittu Bala (Senthil/Abi).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f3">
+      <span class="badge b-reg">Registration</span>
+      <ul>
+        <li><strong>EXECUTION: Registration</strong></li>
+        <li>Take care of Zelle payments on day of event (+ Senthil/Abi).</li>
+        <li>Kids volunteer check: Anushree (Janani).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f4">
+      <span class="badge b-reg">Registration</span>
+      <ul>
+        <li><strong>EXECUTION: Registration</strong> — Food coordination, bulk cooking, etc.</li>
+        <li>Chitra: On stage task.</li>
+        <li>Return Gift (Calendar): Narayanan (Real Estate).</li>
+        <li>Kids volunteer check: Nithya Manikaraja, Vishwa Vidhya (Aswin).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f5">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f6">
+      <span class="badge b-kids">Kids Activities (4:30–7pm)</span>
+      <ul>
+        <li><strong>3:30pm – 4:30pm:</strong> Kids bhajan ends.</li>
+        <li><strong>EXECUTION: Kids Activities (4:30pm to 7pm):</strong> 100 painted bookmarks, printed Pillayar coloring picture, crayons.</li>
+        <li>Volunteers: Anushree (Janani), Nithya Manikaraja (Aswin), Vishwa Vidhya (Aswin), Sudha Vasu (Senthil/Abi), Chittu Bala (Senthil/Abi).</li>
+      </ul>
+    </div>
+
+    <!-- 6:30 PM - 7:30 PM -->
+    <div class="cell time-cell">
+      6:30 PM<br>–<br>7:30 PM
+      <span class="tag">Transitions &amp; Draw</span>
+    </div>
+    <div class="cell bg-f1">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f2">
+      <span class="badge b-trans">Transitions</span>
+      <ul>
+        <li>Manage Next Year Palaharam (Sweets/Snacks) assignments &amp; signup list (+ get info on years they have organized Pillayar Nonbu).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f3">
+      <span class="badge b-trans">Transitions</span>
+      <ul>
+        <li>Manage Next Year Palaharam (Sweets/Snacks) assignments &amp; signup list (+ get info on years they have organized Pillayar Nonbu).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f4">
+      <span class="badge b-trans">Transitions &amp; Draw</span>
+      <ul>
+        <li><strong>6:30pm (after bhajan):</strong> Ask NSNA for PPT/Yelam Funds.</li>
+        <li><strong>7:00pm:</strong> Get Shree demo certificate for spending time on the 501(c)3 app.</li>
+        <li><strong>7:00pm – 8:00pm:</strong> Next Year Pillayar Nonbu Organizers Raffle drawing.</li>
+        <li><strong>7:30pm:</strong> Send out NSNA Regional Rep Transition.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f5">
+      <span class="badge b-trans">Pre-Yelam</span>
+      <ul>
+        <li>Return gift to Sam Annan (plate with fruits).</li>
+        <li>Announcement prior to Yelam.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f6">
+      <span class="badge b-kids">Kids Activities</span>
+      <ul>
+        <li>Kids Activities ends at <strong>7:00pm</strong>.</li>
+      </ul>
+    </div>
+
+    <!-- 7:30 PM - 9:30 PM -->
+    <div class="cell time-cell">
+      7:30 PM<br>–<br>9:30 PM
+      <span class="tag">Yelam</span>
+    </div>
+    <div class="cell bg-f1">
+      <span class="badge b-yelam">Yelam</span>
+      <ul>
+        <li>Muthu to help coordinate Yelam.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f2">
+      <span class="badge b-yelam">Yelam</span>
+      <ul>
+        <li>Full recording of Yelam event on Insta360 (Senthil).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f3">
+      <ul>
+        <li>—</li>
+      </ul>
+    </div>
+    <div class="cell bg-f4">
+      <span class="badge b-trans">Draw / Transition</span>
+      <ul>
+        <li>Next Year Pillayar Nonbu Organizers Raffle (7pm to 8pm).</li>
+        <li>NSNA Regional Rep Transition (7:30pm).</li>
+      </ul>
+    </div>
+    <div class="cell bg-f5">
+      <span class="badge b-yelam">Yelam (7:30–9:30pm)</span>
+      <ul>
+        <li><strong>EXECUTION: Yelam (7:30pm – 9:30pm)</strong></li>
+        <li>30 items in total (+ pair of boy/girl dress, vel silver &amp; vel brass).</li>
+        <li>Thiru: tracking / form / photo collection.</li>
+        <li>Muthu &amp; Sri-Laxmi help coordinate; Senthil full video coverage.</li>
+      </ul>
+    </div>
+    <div class="cell bg-f6">
+      <span class="badge b-yelam">Yelam</span>
+      <ul>
+        <li>Sri-Laxmi to help coordinate Yelam.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ==================== BOTTOM PORTION ==================== -->
+  <div class="bottom-section">
+    <div class="section-banner">
+      <span>Bottom Portion — Prior to Event, Action Items &amp; Do Not Forget to Bring</span>
+      <span class="sub">Action items, shopping lists, and bring checklists per family</span>
+    </div>
+
+    <div class="pre-grid">
+      <!-- Family 1 -->
+      <div class="pre-col bg-f1">
+        <h3>Family #1: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Coffee &amp; Tea Sponsorship: 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</span></li>
+          <li><input type="checkbox"><span>11am: Find volunteer for pickup.</span></li>
+          <li><input type="checkbox"><span>3pm: Senthamarai Kannan / Chokalingam for pickup (Hari).</span></li>
+          <li><input type="checkbox"><span>Meena Aachi to print coloring Pillayar picture.</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Outside Pillayar decorations.</span></li>
+          <li><input type="checkbox"><span>Printed Pillayar coloring pictures.</span></li>
+        </ul>
+      </div>
+
+      <!-- Family 2 -->
+      <div class="pre-col bg-f2">
+        <h3>Family #2: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" checked><span><span class="badge b-done">Done</span> Create Evite invitations for Thirukalyanam &amp; Pillayar Nonbu.</span></li>
+          <li><input type="checkbox" checked><span><span class="badge b-done">Done</span> Procure Raffle tickets for Yelai numbers.</span></li>
+          <li><input type="checkbox"><span>Email Adult Bhajan PDF on 12/15 (@Senthil).</span></li>
+          <li><input type="checkbox"><span>Confirm Kids volunteers: Sudha Vasu, Chittu Bala.</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span><strong>Previous Evening:</strong> 2 full propane tanks + camping stove.</span></li>
+          <li><input type="checkbox"><span>Vitamix blender (Senthil has 1).</span></li>
+          <li><input type="checkbox"><span>Kids Crayons to bring to ICC.</span></li>
+          <li><input type="checkbox"><span>Stage Items to procure (including Fruits).</span></li>
+          <li><input type="checkbox"><span>Insta360 + Abi's camera (for Sruti) + Raffle tickets.</span></li>
+        </ul>
+      </div>
+
+      <!-- Family 3 -->
+      <div class="pre-col bg-f3">
+        <h3>Family #3: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls (+ Uma).</span></li>
+          <li><input type="checkbox"><span>Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</span></li>
+          <li><input type="checkbox"><span>Confirm Kids volunteer: Anushree (Janani).</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Camping Tarp 8x10 tarp.</span></li>
+          <li><input type="checkbox"><span>Stage Pillayar idol (Veshti &amp; Garland).</span></li>
+        </ul>
+      </div>
+
+      <!-- Family 4 -->
+      <div class="pre-col bg-f4">
+        <h3>Family #4: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Ask NSNA for Insurance.</span></li>
+          <li><input type="checkbox"><span>Return Gift (Calendar): Coordinate with Narayanan (Real Estate).</span></li>
+          <li><input type="checkbox"><span>Confirm Kids volunteers: Nithya Manikaraja, Vishwa Vidhya.</span></li>
+          <li><input type="checkbox"><span><strong>Dec 18 (Costco Business Center):</strong> 22 units of water ($220).</span></li>
+          <li><input type="checkbox"><span><strong>Harbor Freight / Home Depot:</strong> Buy tarp (return if unused), Cam locks &amp; straps, Power heavy duty.</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span><strong>Previous Evening:</strong> 1 full propane tank.</span></li>
+          <li><input type="checkbox"><span>Power strips &amp; fire extinguisher.</span></li>
+          <li><input type="checkbox"><span>22 units water, tarp, cam locks &amp; straps, heavy duty power.</span></li>
+        </ul>
+      </div>
+
+      <!-- Family 5 -->
+      <div class="pre-col bg-f5">
+        <h3>Family #5: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Pre-planning: Maintain spreadsheet, manage logistics, set initial prices, purchase IKEA trays.</span></li>
+          <li><input type="checkbox"><span>Week of Event: Print Yelam forms for sponsors; wrap/ribbon IKEA trays (Arathi Arunachalam has leftover materials).</span></li>
+          <li><input type="checkbox"><span>Prepare PowerPoint presentation for Yelam; share Word + PPT + Updated 30-item list (+ boy/girl dress, vel silver &amp; vel brass).</span></li>
+          <li><input type="checkbox"><span>Source Yelam items (Mandala items &amp; garlands), Yelai Thalapa Thundu (Fremont Nalli or India), Mangala items (Puri, etc. from India).</span></li>
+          <li><input type="checkbox" checked><span><span class="badge b-done">Done</span> Lakshmi Palaniappan (1) Jamkalam received from Hari.</span></li>
+          <li><input type="checkbox"><span>Collect: Pleasanton Arun (1 really big Jamkalam); Deepa Aachi (2 big Jamkalam + Tanjore painting).</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>30 Yelam items, wrapped IKEA trays, PPT, printed forms, Jamkalams, Tanjore painting, Sam Annan fruit plate.</span></li>
+        </ul>
+      </div>
+
+      <!-- Family 6 -->
+      <div class="pre-col bg-f6">
+        <h3>Family #6: Action Items</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Adult Bhajan PDF received (@Senthil email 12/15); Kids Bhajan WhatsApp group (ongoing).</span></li>
+          <li><input type="checkbox"><span>100 bookmarks / painted; Chittu Bala volunteer check.</span></li>
+          <li><input type="checkbox"><span>Cleaning staff — enquired and booked.</span></li>
+          <li><input type="checkbox"><span><strong>Costco Business Center (Dec 1–4) / Amazon / Dollar Tree:</strong> Aluminium trays (8 big chutney) &amp; lids; Amazon items; Bounty rolls/cleaning supplies; 2,000 spoons; 200 plastic aprons; 12 serving spoons; 12 palakaram tongs; 200 pairs food-grade plastic gloves; water bottles (1,200 dinner + 300 lunch + 500 whole day, return leftovers); 30-gal trash bags; scrubbers (10 metal + 10 sponge); sugar in cup (2 small packs); 300 boat cups; 100 Costco paper plates; table covers (30 rect + 40 round — Dollar Tree/Amazon).</span></li>
+        </ul>
+        <h3>Have / Bring</h3>
+        <ul class="checklist">
+          <li><input type="checkbox"><span>Camping Tarp 8x10 tarp, 100 bookmarks.</span></li>
+          <li><input type="checkbox"><span>Have: Dinner plates (Done), &gt;1,000 coffee cups, 2,000 paper napkins (don't buy), 26 cloth aprons, 5 hot trays (Kandharpam), 6 burners, stirrers, cleaning solution.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Onsite Cooking Logistics -->
+    <div class="logistics-box">
+      <h2>Onsite Cooking Logistics</h2>
+      <div class="logistics-grid">
+        <div>
+          <strong>Vegetable Chopping &amp; Sourcing</strong>
+          • <em>Previous evening (San Ramon @ Valliappan's house):</em> Chop 25 lbs potatoes &amp; 25 lbs carrots.<br>
+          • <em>Event day (10:00 AM @ ICC):</em> Chop onions, tomatoes, and brinjals (chopping volunteers bring own chopping board &amp; knife).<br>
+          • <em>Curry Leaves:</em> Source from volunteers with home trees (check with Mohan, Mountain House people).
+        </div>
+        <div>
+          <strong>Equipment, Propane &amp; Kitchen Team</strong>
+          • <em>Equipment:</em> Vitamix blenders (Senthil 1, Valliappan Annan 1); volunteer ice boxes for idly warm storage; Bounty rolls, Gloves.<br>
+          • <em>Propane &amp; Gear (previous evening):</em> Senthil (2 full propane tanks + camping stove); Aswin (1 full propane tank).<br>
+          • <em>Kitchen Team (Valliappan's team):</em> Muthu (San Ramon), Arun Priya, Ganesan (Fremont), Viswa Periyannan, Umayal Ramu (Temple), Sundar Hari Priya.
+        </div>
+        <div>
+          <strong>Outdoor Setup, Safety &amp; Transport</strong>
+          • <em>Outdoor Setup:</em> Request wind-resistant side covers at ICC; place tents away from walls; buy tarps if needed.<br>
+          • <em>Safety:</em> Aswin to bring power strips and a fire extinguisher.<br>
+          • <em>Transport:</em> Rent a U-Haul truck to store and transport event items.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
