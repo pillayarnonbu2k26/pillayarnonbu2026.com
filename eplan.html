@@ -19,6 +19,7 @@
       --f4: #f5f0ff; --f4-h: #6d28d9;
       --f5: #fff0f5; --f5-h: #be185d;
       --f6: #ecfeff; --f6-h: #0e7490;
+      --aachi: #fefce8; --aachi-h: #a16207;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,7 +52,6 @@
       color: var(--muted);
     }
 
-    /* Mobile-only sticky family filter */
     .mobile-filter {
       display: none;
     }
@@ -79,7 +79,7 @@
 
     .schedule-grid {
       display: grid;
-      grid-template-columns: 98px repeat(6, minmax(155px, 1fr));
+      grid-template-columns: 92px repeat(7, minmax(140px, 1fr));
       border: 1px solid var(--border);
       border-top: none;
       background: var(--card);
@@ -92,7 +92,7 @@
       padding: 7px 8px;
       vertical-align: top;
     }
-    .cell:nth-child(7n) { border-right: none; }
+    .cell:nth-child(8n) { border-right: none; }
 
     .col-header {
       font-weight: 700;
@@ -118,6 +118,7 @@
     .h-f4 { background: var(--f4-h); }
     .h-f5 { background: var(--f5-h); }
     .h-f6 { background: var(--f6-h); }
+    .h-aachi { background: var(--aachi-h); }
 
     .time-cell {
       background: #f3efe9;
@@ -145,6 +146,7 @@
     .bg-f4 { background: var(--f4); }
     .bg-f5 { background: var(--f5); }
     .bg-f6 { background: var(--f6); }
+    .bg-aachi { background: var(--aachi); }
 
     ul {
       padding-left: 14px;
@@ -179,7 +181,7 @@
 
     .pre-grid {
       display: grid;
-      grid-template-columns: repeat(6, minmax(165px, 1fr));
+      grid-template-columns: repeat(7, minmax(145px, 1fr));
       border: 1px solid var(--border);
       border-top: none;
       background: var(--card);
@@ -217,31 +219,6 @@
       flex-shrink: 0;
       width: 15px;
       height: 15px;
-    }
-
-    .logistics-box {
-      border: 2px solid var(--gold);
-      background: #fffdf7;
-      border-radius: 4px;
-      padding: 10px 12px;
-    }
-    .logistics-box h2 {
-      font-size: 13px;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      border-bottom: 1px solid #eadcc5;
-      padding-bottom: 4px;
-    }
-    .logistics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px 16px;
-    }
-    .logistics-grid div strong {
-      color: var(--accent);
-      display: block;
-      margin-bottom: 2px;
     }
 
     .mobile-fam-title { display: none; }
@@ -302,7 +279,7 @@
         margin-bottom: 8px;
         padding: 10px 12px;
       }
-      .cell:nth-child(7n) { border-right: 1px solid var(--border); }
+      .cell:nth-child(8n) { border-right: 1px solid var(--border); }
 
       .time-cell {
         background: #3b332e;
@@ -338,6 +315,7 @@
       .bg-f4 .mobile-fam-title { color: var(--f4-h); }
       .bg-f5 .mobile-fam-title { color: var(--f5-h); }
       .bg-f6 .mobile-fam-title { color: var(--f6-h); }
+      .bg-aachi .mobile-fam-title { color: var(--aachi-h); }
 
       .cell[data-empty="true"] {
         display: none;
@@ -357,19 +335,14 @@
       .pre-col:last-child { border-right: 1px solid var(--border); }
       .pre-col h3 { font-size: 13px; }
 
-      .logistics-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
       .is-hidden {
         display: none !important;
       }
     }
 
     @media print {
-      body { padding: 0; background: #fff; font-size: 10px; }
-      @page { size: landscape; margin: 0.35in; }
+      body { padding: 0; background: #fff; font-size: 9.5px; }
+      @page { size: landscape; margin: 0.3in; }
       .col-header { position: static; }
       .mobile-filter, .mobile-fam-title { display: none !important; }
       .bottom-section { page-break-before: always; }
@@ -380,7 +353,7 @@
 
   <div class="header">
     <h1>Pillayar Nonbu — Organizer Task Assignments</h1>
-    <div class="meta">6 Families &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
+    <div class="meta">6 Families + Aachis &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
   </div>
 
   <!-- Mobile Family Filter -->
@@ -392,6 +365,7 @@
     <button type="button" data-filter="4">F4: Aswin</button>
     <button type="button" data-filter="5">F5: Thiru</button>
     <button type="button" data-filter="6">F6: Hari</button>
+    <button type="button" data-filter="aachis">Aachis</button>
   </div>
 
   <!-- ==================== TOP PORTION ==================== -->
@@ -408,6 +382,7 @@
     <div class="cell col-header h-f4">Family #4<small>Aswin Natesh Venkatesh &amp; Chitra Lakshmanan</small></div>
     <div class="cell col-header h-f5">Family #5<small>Thiruvakarasu Ramananathan &amp; Unnamalai Valliappan Kannappan</small></div>
     <div class="cell col-header h-f6">Family #6<small>Hariharasudahan Subramanian &amp; Srilakshmi Sethu</small></div>
+    <div class="cell col-header h-aachi">Aachis<small>Task Assignments</small></div>
 
     <!-- 10:00 AM - 2:00 PM -->
     <div class="cell time-cell">
@@ -450,7 +425,9 @@
         <li>Jamkalams &amp; Tanjore painting setup (Lakshmi Palaniappan, Pleasanton Arun, Deepa Aachi).</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6" data-empty="true">
+    <div class="cell bg-f6" data-family="6" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-aachi" data-family="aachis" data-empty="true">
+      <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
     </div>
 
@@ -479,6 +456,10 @@
         <li><strong>3:30pm – 4:30pm:</strong> Kids bhajan (1 hr).</li>
         <li>3pm Coffee/Tea pickup coordination (Hari).</li>
       </ul>
+    </div>
+    <div class="cell bg-aachi" data-family="aachis" data-empty="true">
+      <div class="mobile-fam-title">Aachis</div>
+      <ul><li>—</li></ul>
     </div>
 
     <!-- 4:00 PM - 6:30 PM -->
@@ -526,6 +507,10 @@
         <li>Volunteers: Anushree (Janani), Nithya Manikaraja (Aswin), Vishwa Vidhya (Aswin), Sudha Vasu (Senthil/Abi), Chittu Bala (Senthil/Abi).</li>
       </ul>
     </div>
+    <div class="cell bg-aachi" data-family="aachis" data-empty="true">
+      <div class="mobile-fam-title">Aachis</div>
+      <ul><li>—</li></ul>
+    </div>
 
     <!-- 6:30 PM - 7:30 PM -->
     <div class="cell time-cell">
@@ -572,6 +557,10 @@
         <li>Kids Activities ends at <strong>7:00pm</strong>.</li>
       </ul>
     </div>
+    <div class="cell bg-aachi" data-family="aachis" data-empty="true">
+      <div class="mobile-fam-title">Aachis</div>
+      <ul><li>—</li></ul>
+    </div>
 
     <!-- 7:30 PM - 9:30 PM -->
     <div class="cell time-cell">
@@ -617,6 +606,10 @@
       <ul>
         <li>Sri-Laxmi to help coordinate Yelam.</li>
       </ul>
+    </div>
+    <div class="cell bg-aachi" data-family="aachis" data-empty="true">
+      <div class="mobile-fam-title">Aachis</div>
+      <ul><li>—</li></ul>
     </div>
   </div>
 
@@ -720,6 +713,17 @@
         <ul class="checklist">
           <li><input type="checkbox"><span>Camping Tarp 8x10 tarp, 100 bookmarks.</span></li>
           <li><input type="checkbox"><span>Have: Dinner plates (Done), &gt;1,000 coffee cups, 2,000 paper napkins (don't buy), 26 cloth aprons, 5 hot trays (Kandharpam), 6 burners, stirrers, cleaning solution.</span></li>
+        </ul>
+      </div>
+
+      <div class="pre-col bg-aachi" data-family="aachis">
+        <h3>Aachis: Action Items</h3>
+        <ul class="checklist">
+          <li><span>—</span></li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul class="checklist">
+          <li><span>—</span></li>
         </ul>
       </div>
     </div>
