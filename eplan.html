@@ -53,7 +53,34 @@
     }
 
     .mobile-filter {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--bg);
+      padding: 8px 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-filter button {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+    .mobile-filter button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .is-hidden {
+      display: none !important;
     }
 
     .section-banner {
@@ -84,6 +111,12 @@
       border-top: none;
       background: var(--card);
       margin-bottom: 20px;
+    }
+    .schedule-grid.filtered-single {
+      grid-template-columns: 110px 1fr;
+    }
+    .pre-grid.filtered-single {
+      grid-template-columns: 1fr;
     }
 
     .cell {
@@ -376,13 +409,13 @@
 
   <div class="schedule-grid">
     <div class="cell col-header h-time">Time Slot</div>
-    <div class="cell col-header h-f1">Family #1<small>Murukappan Sekappan &amp; MuthuMeena Muthukaruppan</small></div>
-    <div class="cell col-header h-f2">Family #2<small>Senthil Kasi &amp; Abirami Viswanathan</small></div>
-    <div class="cell col-header h-f3">Family #3<small>Karthick Chockalingam &amp; Janani Muthuveerappan</small></div>
-    <div class="cell col-header h-f4">Family #4<small>Aswin Natesh Venkatesh &amp; Chitra Lakshmanan</small></div>
-    <div class="cell col-header h-f5">Family #5<small>Thiruvakarasu Ramananathan &amp; Unnamalai Valliappan Kannappan</small></div>
-    <div class="cell col-header h-f6">Family #6<small>Hariharasudahan Subramanian &amp; Srilakshmi Sethu</small></div>
-    <div class="cell col-header h-aachi">Aachis<small>Task Assignments</small></div>
+    <div class="cell col-header h-f1" data-family="1">Family #1<small>Murukappan Sekappan &amp; MuthuMeena Muthukaruppan</small></div>
+    <div class="cell col-header h-f2" data-family="2">Family #2<small>Senthil Kasi &amp; Abirami Viswanathan</small></div>
+    <div class="cell col-header h-f3" data-family="3">Family #3<small>Karthick Chockalingam &amp; Janani Muthuveerappan</small></div>
+    <div class="cell col-header h-f4" data-family="4">Family #4<small>Aswin Natesh Venkatesh &amp; Chitra Lakshmanan</small></div>
+    <div class="cell col-header h-f5" data-family="5">Family #5<small>Thiruvakarasu Ramananathan &amp; Unnamalai Valliappan Kannappan</small></div>
+    <div class="cell col-header h-f6" data-family="6">Family #6<small>Hariharasudahan Subramanian &amp; Srilakshmi Sethu</small></div>
+    <div class="cell col-header h-aachi" data-family="aachis">Aachis<small>Task Assignments</small></div>
 
     <!-- 10:00 AM - 2:00 PM -->
     <div class="cell time-cell">
@@ -735,8 +768,11 @@
         document.querySelectorAll('.mobile-filter button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const val = btn.dataset.filter;
+        const single = val !== 'all';
+        document.querySelector('.schedule-grid').classList.toggle('filtered-single', single);
+        document.querySelector('.pre-grid').classList.toggle('filtered-single', single);
         document.querySelectorAll('[data-family]').forEach(el => {
-          el.classList.toggle('is-hidden', val !== 'all' && el.dataset.family !== val);
+          el.classList.toggle('is-hidden', single && el.dataset.family !== val);
         });
       });
     });
