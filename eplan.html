@@ -6,31 +6,36 @@
   <title>Pillayar Nonbu 2026 — Organizer Task Assignments</title>
   <style>
     :root {
-      --bg: #faf8f5;
+      --bg: #f6f4ef;
       --card: #ffffff;
-      --border: #d8cfc4;
-      --text: #1f1b18;
-      --muted: #645c54;
+      --border: #e4ddd3;
+      --text: #1c1917;
+      --muted: #6b635b;
       --accent: #7a2e22;
+      --accent-soft: #fdf2f0;
       --gold: #b9822f;
-      --f1: #fdf2e9; --f1-h: #b45309;
-      --f2: #eef6ff; --f2-h: #1d4ed8;
-      --f3: #eefaf2; --f3-h: #15803d;
-      --f4: #f5f0ff; --f4-h: #6d28d9;
-      --f5: #fff0f5; --f5-h: #be185d;
+      --shadow: 0 1px 3px rgba(28, 25, 23, 0.06), 0 1px 2px rgba(28, 25, 23, 0.04);
+      --f1: #fff7ed; --f1-h: #c2410c;
+      --f2: #eff6ff; --f2-h: #1d4ed8;
+      --f3: #f0fdf4; --f3-h: #15803d;
+      --f4: #faf5ff; --f4-h: #7e22ce;
+      --f5: #fdf2f8; --f5-h: #be185d;
       --f6: #ecfeff; --f6-h: #0e7490;
       --aachi: #fefce8; --aachi-h: #a16207;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      font-size: 12px;
-      line-height: 1.38;
-      padding: 16px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      padding: 18px 20px 32px;
+      -webkit-font-smoothing: antialiased;
     }
 
     .header {
@@ -38,41 +43,79 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 6px;
-      border-bottom: 3px solid var(--accent);
-      padding-bottom: 8px;
+      gap: 10px;
+      padding-bottom: 12px;
       margin-bottom: 12px;
+      border-bottom: 2px solid var(--border);
     }
     .header h1 {
       font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
       color: var(--accent);
     }
     .header .meta {
-      font-size: 11.5px;
+      font-size: 12px;
       color: var(--muted);
+      margin-top: 2px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .jump-link, .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: all 0.15s ease;
+    }
+    .jump-link:hover, .print-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
     }
 
     .mobile-filter {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       gap: 6px;
+      flex-wrap: wrap;
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: var(--bg);
-      padding: 8px 0;
-      margin-bottom: 10px;
+      z-index: 20;
+      background: rgba(246, 244, 239, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 10px 0;
+      margin-bottom: 14px;
       border-bottom: 1px solid var(--border);
     }
     .mobile-filter button {
       border: 1px solid var(--border);
-      background: #fff;
+      background: var(--card);
       color: var(--text);
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 600;
-      padding: 5px 11px;
-      border-radius: 16px;
+      padding: 6px 13px;
+      border-radius: 999px;
       cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: var(--shadow);
+      transition: all 0.15s ease;
+    }
+    .mobile-filter button:hover {
+      border-color: var(--accent);
     }
     .mobile-filter button.active {
       background: var(--accent);
@@ -84,13 +127,14 @@
     }
 
     .section-banner {
-      background: var(--accent);
+      background: linear-gradient(135deg, #7a2e22 0%, #5c2118 100%);
       color: #fff;
-      padding: 6px 12px;
+      padding: 9px 14px;
       font-size: 13px;
       font-weight: 700;
+      letter-spacing: 0.3px;
       text-transform: uppercase;
-      border-radius: 4px 4px 0 0;
+      border-radius: 10px 10px 0 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -101,40 +145,45 @@
       font-weight: 400;
       font-size: 11px;
       text-transform: none;
-      opacity: 0.9;
+      opacity: 0.88;
     }
 
     .schedule-grid {
       display: grid;
-      grid-template-columns: 92px repeat(7, minmax(140px, 1fr));
+      grid-template-columns: 94px repeat(7, minmax(140px, 1fr));
       border: 1px solid var(--border);
       border-top: none;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
       background: var(--card);
-      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
     }
     .schedule-grid.filtered-single {
-      grid-template-columns: 110px 1fr;
+      grid-template-columns: 120px minmax(280px, 680px);
+      width: fit-content;
     }
     .pre-grid.filtered-single {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(280px, 800px);
+      width: fit-content;
     }
 
     .cell {
       border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 7px 8px;
+      padding: 9px 10px;
       vertical-align: top;
     }
     .cell:nth-child(8n) { border-right: none; }
 
     .col-header {
       font-weight: 700;
-      font-size: 12px;
+      font-size: 12.5px;
       color: #fff;
-      padding: 8px;
+      padding: 10px 8px;
       text-align: center;
       position: sticky;
-      top: 0;
+      top: 52px;
       z-index: 2;
     }
     .col-header small {
@@ -144,7 +193,7 @@
       opacity: 0.92;
       margin-top: 2px;
     }
-    .h-time { background: #3b332e; }
+    .h-time { background: #292524; }
     .h-f1 { background: var(--f1-h); }
     .h-f2 { background: var(--f2-h); }
     .h-f3 { background: var(--f3-h); }
@@ -154,7 +203,7 @@
     .h-aachi { background: var(--aachi-h); }
 
     .time-cell {
-      background: #f3efe9;
+      background: #f5f2ec;
       font-weight: 700;
       color: var(--accent);
       font-size: 11.5px;
@@ -164,13 +213,14 @@
       text-align: center;
     }
     .time-cell .tag {
-      margin-top: 4px;
+      margin-top: 5px;
       font-size: 9.5px;
       font-weight: 600;
-      color: #4a423b;
-      background: #e5ddd2;
-      padding: 2px 4px;
-      border-radius: 3px;
+      color: #44403c;
+      background: #e7e0d6;
+      padding: 2px 6px;
+      border-radius: 999px;
+      display: inline-block;
     }
 
     .bg-f1 { background: var(--f1); }
@@ -182,11 +232,11 @@
     .bg-aachi { background: var(--aachi); }
 
     ul {
-      padding-left: 14px;
+      padding-left: 15px;
       margin: 0;
     }
     li {
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
     li:last-child { margin-bottom: 0; }
 
@@ -194,12 +244,13 @@
       display: inline-block;
       font-size: 9.5px;
       font-weight: 700;
-      padding: 1px 5px;
-      border-radius: 3px;
+      padding: 2px 7px;
+      border-radius: 999px;
       text-transform: uppercase;
-      margin-bottom: 3px;
+      letter-spacing: 0.3px;
+      margin-bottom: 5px;
     }
-    .b-decor { background: #fde68a; color: #78350f; }
+    .b-decor { background: #fef08a; color: #854d0e; }
     .b-bhajan { background: #cffafe; color: #155e75; }
     .b-reg { background: #dbeafe; color: #1e40af; }
     .b-kids { background: #dcfce7; color: #166534; }
@@ -218,130 +269,126 @@
       grid-template-columns: repeat(7, minmax(145px, 1fr));
       border: 1px solid var(--border);
       border-top: none;
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
       background: var(--card);
+      box-shadow: var(--shadow);
       margin-bottom: 14px;
     }
 
     .pre-col {
       border-right: 1px solid var(--border);
-      padding: 8px;
+      padding: 10px;
     }
     .pre-col:last-child { border-right: none; }
 
     .pre-col h3 {
-      font-size: 11.5px;
+      font-size: 11px;
       text-transform: uppercase;
-      margin: 8px 0 4px;
-      padding-bottom: 2px;
-      border-bottom: 1px solid var(--border);
+      letter-spacing: 0.4px;
+      margin: 10px 0 5px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       color: var(--accent);
     }
     .pre-col h3:first-child { margin-top: 0; }
-
-    .checklist {
-      list-style: none;
-      padding-left: 0;
-    }
-    .checklist li {
-      display: flex;
-      align-items: flex-start;
-      gap: 6px;
-      margin-bottom: 5px;
-    }
-    .checklist input[type="checkbox"] {
-      margin-top: 2px;
-      flex-shrink: 0;
-      width: 15px;
-      height: 15px;
-    }
 
     .mobile-fam-title { display: none; }
 
     /* ==================== MOBILE RESPONSIVE ==================== */
     @media (max-width: 900px) {
       body {
-        padding: 10px;
-        font-size: 14px;
-        line-height: 1.45;
+        padding: 12px 12px 28px;
+        font-size: 14.5px;
+        line-height: 1.5;
+      }
+      .header {
+        padding-bottom: 10px;
+        margin-bottom: 6px;
       }
       .header h1 { font-size: 18px; }
       .header .meta { font-size: 12px; }
+      .print-btn { display: none; }
 
       .mobile-filter {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background: var(--bg);
-        padding: 8px 0;
-        margin-bottom: 8px;
-        border-bottom: 1px solid var(--border);
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 7px;
+        padding: 9px 2px;
+        margin-bottom: 10px;
       }
+      .mobile-filter::-webkit-scrollbar { display: none; }
       .mobile-filter button {
-        border: 1px solid var(--border);
-        background: #fff;
-        color: var(--text);
-        font-size: 12.5px;
-        font-weight: 600;
-        padding: 6px 10px;
-        border-radius: 16px;
-        cursor: pointer;
-      }
-      .mobile-filter button.active {
-        background: var(--accent);
-        color: #fff;
-        border-color: var(--accent);
+        font-size: 13px;
+        padding: 7px 14px;
       }
 
       .section-banner {
-        font-size: 12.5px;
-        padding: 8px 10px;
+        font-size: 12px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        margin-bottom: 8px;
       }
 
-      .schedule-grid {
-        grid-template-columns: 1fr;
+      .schedule-grid, .schedule-grid.filtered-single {
+        display: block;
+        width: 100%;
         border: none;
+        border-radius: 0;
         background: transparent;
+        box-shadow: none;
       }
       .col-header { display: none; }
 
       .cell {
         border: 1px solid var(--border);
-        border-radius: 6px;
+        border-radius: 10px;
         margin-bottom: 8px;
-        padding: 10px 12px;
+        padding: 12px 14px;
+        box-shadow: var(--shadow);
       }
       .cell:nth-child(8n) { border-right: 1px solid var(--border); }
 
+      .bg-f1 { border-left: 4px solid var(--f1-h); background: #fff; }
+      .bg-f2 { border-left: 4px solid var(--f2-h); background: #fff; }
+      .bg-f3 { border-left: 4px solid var(--f3-h); background: #fff; }
+      .bg-f4 { border-left: 4px solid var(--f4-h); background: #fff; }
+      .bg-f5 { border-left: 4px solid var(--f5-h); background: #fff; }
+      .bg-f6 { border-left: 4px solid var(--f6-h); background: #fff; }
+      .bg-aachi { border-left: 4px solid var(--aachi-h); background: #fff; }
+
       .time-cell {
-        background: #3b332e;
+        background: #292524;
         color: #fff;
         text-align: left;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-top: 10px;
-        padding: 8px 12px;
-        font-size: 13px;
+        margin-top: 14px;
+        margin-bottom: 8px;
+        padding: 9px 14px;
+        font-size: 13.5px;
+        border: none;
+        border-radius: 8px;
       }
       .time-cell br { display: none; }
       .time-cell .tag {
         margin-top: 0;
-        background: rgba(255,255,255,0.2);
+        background: rgba(255,255,255,0.18);
         color: #fff;
         font-size: 11px;
-        padding: 2px 7px;
+        padding: 3px 9px;
       }
 
       .mobile-fam-title {
         display: block;
         font-weight: 700;
-        font-size: 12.5px;
-        margin-bottom: 5px;
-        padding-bottom: 3px;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
+        font-size: 13px;
+        margin-bottom: 6px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border);
       }
       .bg-f1 .mobile-fam-title { color: var(--f1-h); }
       .bg-f2 .mobile-fam-title { color: var(--f2-h); }
@@ -355,30 +402,31 @@
         display: none;
       }
 
-      .pre-grid {
-        grid-template-columns: 1fr;
+      .pre-grid, .pre-grid.filtered-single {
+        display: block;
+        width: 100%;
         border: none;
+        border-radius: 0;
         background: transparent;
+        box-shadow: none;
       }
       .pre-col {
         border: 1px solid var(--border);
-        border-radius: 6px;
-        margin-bottom: 10px;
-        padding: 10px 12px;
+        border-radius: 10px;
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        box-shadow: var(--shadow);
       }
       .pre-col:last-child { border-right: 1px solid var(--border); }
       .pre-col h3 { font-size: 13px; }
-
-      .is-hidden {
-        display: none !important;
-      }
     }
 
     @media print {
       body { padding: 0; background: #fff; font-size: 9.5px; }
       @page { size: landscape; margin: 0.3in; }
       .col-header { position: static; }
-      .mobile-filter, .mobile-fam-title { display: none !important; }
+      .mobile-filter, .mobile-fam-title, .header-actions { display: none !important; }
+      .schedule-grid, .pre-grid { box-shadow: none; border-radius: 0; }
       .bottom-section { page-break-before: always; }
     }
   </style>
@@ -386,11 +434,18 @@
 <body>
 
   <div class="header">
-    <h1>Pillayar Nonbu — Organizer Task Assignments</h1>
-    <div class="meta">6 Families + Aachis &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
+    <div>
+      <h1>Pillayar Nonbu — Organizer Task Assignments</h1>
+      <div class="meta">6 Families + Aachis &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
+    </div>
+    <div class="header-actions">
+      <a class="jump-link" href="#schedule">Schedule</a>
+      <a class="jump-link" href="#action-items">Action Items</a>
+      <button type="button" class="print-btn" onclick="window.print()">Print</button>
+    </div>
   </div>
 
-  <!-- Mobile Family Filter -->
+  <!-- Family Filter Bar -->
   <div class="mobile-filter" aria-label="Filter by family">
     <button type="button" class="active" data-filter="all">All</button>
     <button type="button" data-filter="2">Senthil</button>
@@ -403,7 +458,7 @@
   </div>
 
   <!-- ==================== TOP PORTION ==================== -->
-  <div class="section-banner">
+  <div id="schedule" class="section-banner">
     <span>Top Portion — Event-Day Schedule</span>
     <span class="sub">10–2pm: Decoration &nbsp;|&nbsp; 2–4pm &nbsp;|&nbsp; 4–6:30pm: Kids Activities &amp; Registration &nbsp;|&nbsp; 6:30–7:30pm: Transitions &amp; Next Year Draw &nbsp;|&nbsp; 7:30–9:30pm: Yelam</span>
   </div>
@@ -452,7 +507,14 @@
         <li>Yelam item setup.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f6" data-family="6">
+      <div class="mobile-fam-title">Family #6: Hari &amp; Srilakshmi</div>
+      <span class="badge b-trans">Setup</span>
+      <ul>
+        <li>Floor plan layout.</li>
+        <li>Onsite cooking.</li>
+      </ul>
+    </div>
     <div class="cell bg-f1" data-family="1">
       <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
       <span class="badge b-decor">Decoration</span>
@@ -572,8 +634,8 @@
       <span class="badge b-stage">On Stage</span>
       <ul>
         <li><strong>6:30pm:</strong> NCNA app demo by Shree.</li>
-        <li><strong>7:00pm – 8:00pm:</strong> Next Year Pillayar Nonbu Organizers Raffle drawing.</li>
-        <li><strong>7:30pm:</strong> Send out NSNA Regional Rep Transition.</li>
+        <li><strong>7:00pm:</strong> NSNA Regional Rep Transition.</li>
+        <li><strong>7:15pm:</strong> Next Year Pillayar Nonbu Organizers Draw.</li>
       </ul>
     </div>
     <div class="cell bg-f5" data-family="5" data-empty="true">
@@ -653,7 +715,7 @@
   </div>
 
   <!-- ==================== BOTTOM PORTION ==================== -->
-  <div class="bottom-section">
+  <div id="action-items" class="bottom-section">
     <div class="section-banner">
       <span>Bottom Portion — Prior to Event, Action Items &amp; Do Not Forget to Bring</span>
       <span class="sub">Action items, shopping lists, and bring checklists per family</span>
@@ -791,19 +853,38 @@
   </div>
 
   <script>
+    function updateMobileTimeHeaders(val) {
+      const isMobile = window.innerWidth <= 900;
+      const cells = Array.from(document.querySelectorAll('.schedule-grid > .cell'));
+      for (let i = 8; i < cells.length; i += 8) {
+        const timeCell = cells[i];
+        if (!timeCell || !timeCell.classList.contains('time-cell')) continue;
+        if (!isMobile || val === 'all') {
+          timeCell.classList.remove('is-hidden');
+          continue;
+        }
+        const rowCells = cells.slice(i + 1, i + 8);
+        const hasVisible = rowCells.some(c => c.dataset.family === val && c.dataset.empty !== 'true');
+        timeCell.classList.toggle('is-hidden', !hasVisible);
+      }
+    }
+
+    let activeFilter = 'all';
     document.querySelectorAll('.mobile-filter button').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.mobile-filter button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const val = btn.dataset.filter;
-        const single = val !== 'all';
+        activeFilter = btn.dataset.filter;
+        const single = activeFilter !== 'all';
         document.querySelector('.schedule-grid').classList.toggle('filtered-single', single);
         document.querySelector('.pre-grid').classList.toggle('filtered-single', single);
         document.querySelectorAll('[data-family]').forEach(el => {
-          el.classList.toggle('is-hidden', single && el.dataset.family !== val);
+          el.classList.toggle('is-hidden', single && el.dataset.family !== activeFilter);
         });
+        updateMobileTimeHeaders(activeFilter);
       });
     });
+    window.addEventListener('resize', () => updateMobileTimeHeaders(activeFilter));
   </script>
 
 </body>
