@@ -36,6 +36,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 8px;
       margin-bottom: 12px;
@@ -49,6 +51,11 @@
       color: var(--muted);
     }
 
+    /* Mobile-only sticky family filter */
+    .mobile-filter {
+      display: none;
+    }
+
     .section-banner {
       background: var(--accent);
       color: #fff;
@@ -60,6 +67,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 4px;
     }
     .section-banner span.sub {
       font-weight: 400;
@@ -200,12 +209,14 @@
     .checklist li {
       display: flex;
       align-items: flex-start;
-      gap: 5px;
-      margin-bottom: 4px;
+      gap: 6px;
+      margin-bottom: 5px;
     }
     .checklist input[type="checkbox"] {
       margin-top: 2px;
       flex-shrink: 0;
+      width: 15px;
+      height: 15px;
     }
 
     .logistics-box {
@@ -233,10 +244,134 @@
       margin-bottom: 2px;
     }
 
+    .mobile-fam-title { display: none; }
+
+    /* ==================== MOBILE RESPONSIVE ==================== */
+    @media (max-width: 900px) {
+      body {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.45;
+      }
+      .header h1 { font-size: 18px; }
+      .header .meta { font-size: 12px; }
+
+      .mobile-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--bg);
+        padding: 8px 0;
+        margin-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+      }
+      .mobile-filter button {
+        border: 1px solid var(--border);
+        background: #fff;
+        color: var(--text);
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 6px 10px;
+        border-radius: 16px;
+        cursor: pointer;
+      }
+      .mobile-filter button.active {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+
+      .section-banner {
+        font-size: 12.5px;
+        padding: 8px 10px;
+      }
+
+      .schedule-grid {
+        grid-template-columns: 1fr;
+        border: none;
+        background: transparent;
+      }
+      .col-header { display: none; }
+
+      .cell {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        margin-bottom: 8px;
+        padding: 10px 12px;
+      }
+      .cell:nth-child(7n) { border-right: 1px solid var(--border); }
+
+      .time-cell {
+        background: #3b332e;
+        color: #fff;
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        padding: 8px 12px;
+        font-size: 13px;
+      }
+      .time-cell br { display: none; }
+      .time-cell .tag {
+        margin-top: 0;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        font-size: 11px;
+        padding: 2px 7px;
+      }
+
+      .mobile-fam-title {
+        display: block;
+        font-weight: 700;
+        font-size: 12.5px;
+        margin-bottom: 5px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+      .bg-f1 .mobile-fam-title { color: var(--f1-h); }
+      .bg-f2 .mobile-fam-title { color: var(--f2-h); }
+      .bg-f3 .mobile-fam-title { color: var(--f3-h); }
+      .bg-f4 .mobile-fam-title { color: var(--f4-h); }
+      .bg-f5 .mobile-fam-title { color: var(--f5-h); }
+      .bg-f6 .mobile-fam-title { color: var(--f6-h); }
+
+      .cell[data-empty="true"] {
+        display: none;
+      }
+
+      .pre-grid {
+        grid-template-columns: 1fr;
+        border: none;
+        background: transparent;
+      }
+      .pre-col {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        margin-bottom: 10px;
+        padding: 10px 12px;
+      }
+      .pre-col:last-child { border-right: 1px solid var(--border); }
+      .pre-col h3 { font-size: 13px; }
+
+      .logistics-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .is-hidden {
+        display: none !important;
+      }
+    }
+
     @media print {
       body { padding: 0; background: #fff; font-size: 10px; }
       @page { size: landscape; margin: 0.35in; }
       .col-header { position: static; }
+      .mobile-filter, .mobile-fam-title { display: none !important; }
       .bottom-section { page-break-before: always; }
     }
   </style>
@@ -246,6 +381,17 @@
   <div class="header">
     <h1>Pillayar Nonbu — Organizer Task Assignments</h1>
     <div class="meta">6 Families &nbsp;|&nbsp; Top: Event-Day Schedule &nbsp;|&nbsp; Bottom: Prior to Event, Action Items &amp; Bring List</div>
+  </div>
+
+  <!-- Mobile Family Filter -->
+  <div class="mobile-filter" aria-label="Filter by family">
+    <button type="button" class="active" data-filter="all">All</button>
+    <button type="button" data-filter="1">F1: Muthu</button>
+    <button type="button" data-filter="2">F2: Senthil</button>
+    <button type="button" data-filter="3">F3: Karthik</button>
+    <button type="button" data-filter="4">F4: Aswin</button>
+    <button type="button" data-filter="5">F5: Thiru</button>
+    <button type="button" data-filter="6">F6: Hari</button>
   </div>
 
   <!-- ==================== TOP PORTION ==================== -->
@@ -268,19 +414,22 @@
       10:00 AM<br>–<br>2:00 PM
       <span class="tag">Decoration</span>
     </div>
-    <div class="cell bg-f1">
+    <div class="cell bg-f1" data-family="1">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
       <span class="badge b-decor">Decoration</span>
       <ul>
         <li>Outside Pillayar decorations.</li>
         <li><strong>11am Coffee &amp; Tea:</strong> 70 coffee + 100 tea (volunteer pickup).</li>
       </ul>
     </div>
-    <div class="cell bg-f2">
+    <div class="cell bg-f2" data-family="2">
+      <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <ul>
         <li>Abi to lend camera to Sruti (Chitra's cousin) to take candid photos.</li>
       </ul>
     </div>
-    <div class="cell bg-f3">
+    <div class="cell bg-f3" data-family="3">
+      <div class="mobile-fam-title">Family #3: Karthik &amp; Janani</div>
       <span class="badge b-decor">Decoration</span>
       <ul>
         <li>Collect stage Pillayar idol (includes Veshti &amp; Garland) — coordinate with Uma &amp; Alagu (Flowers).</li>
@@ -288,55 +437,41 @@
         <li>Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</li>
       </ul>
     </div>
-    <div class="cell bg-f4">
+    <div class="cell bg-f4" data-family="4">
+      <div class="mobile-fam-title">Family #4: Aswin &amp; Chitra</div>
       <span class="badge b-food">Chopping / Kitchen</span>
       <ul>
         <li>10:00 AM: Chopping volunteers at ICC (onions, tomatoes, brinjals).</li>
       </ul>
     </div>
-    <div class="cell bg-f5">
+    <div class="cell bg-f5" data-family="5">
+      <div class="mobile-fam-title">Family #5: Thiru &amp; Unna</div>
       <ul>
         <li>Jamkalams &amp; Tanjore painting setup (Lakshmi Palaniappan, Pleasanton Arun, Deepa Aachi).</li>
       </ul>
     </div>
-    <div class="cell bg-f6">
-      <ul>
-        <li>—</li>
-      </ul>
+    <div class="cell bg-f6" data-family="6" data-empty="true">
+      <ul><li>—</li></ul>
     </div>
 
     <!-- 2:00 PM - 4:00 PM -->
     <div class="cell time-cell">
       2:00 PM<br>–<br>4:00 PM
     </div>
-    <div class="cell bg-f1">
+    <div class="cell bg-f1" data-family="1">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
       <span class="badge b-food">Coffee &amp; Tea</span>
       <ul>
         <li><strong>3pm Coffee &amp; Tea:</strong> 200 coffee + 400 tea.</li>
         <li>3pm pickup: Senthamarai Kannan / Chokalingam (Hari).</li>
       </ul>
     </div>
-    <div class="cell bg-f2">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f3">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f4">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f5">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f6">
+    <div class="cell bg-f2" data-family="2" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f3" data-family="3" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f4" data-family="4" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f5" data-family="5" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f6" data-family="6">
+      <div class="mobile-fam-title">Family #6: Hari &amp; Srilakshmi</div>
       <span class="badge b-bhajan">Bhajan</span>
       <ul>
         <li><strong>EXECUTION: Coordinate Bhajan</strong></li>
@@ -351,12 +486,9 @@
       4:00 PM<br>–<br>6:30 PM
       <span class="tag">Kids &amp; Reg</span>
     </div>
-    <div class="cell bg-f1">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f2">
+    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f2" data-family="2">
+      <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <span class="badge b-reg">Registration (4–6pm)</span>
       <ul>
         <li><strong>EXECUTION: Registration (4pm to 6pm)</strong></li>
@@ -365,7 +497,8 @@
         <li>Kids volunteer check: Sudha Vasu, Chittu Bala (Senthil/Abi).</li>
       </ul>
     </div>
-    <div class="cell bg-f3">
+    <div class="cell bg-f3" data-family="3">
+      <div class="mobile-fam-title">Family #3: Karthik &amp; Janani</div>
       <span class="badge b-reg">Registration</span>
       <ul>
         <li><strong>EXECUTION: Registration</strong></li>
@@ -373,7 +506,8 @@
         <li>Kids volunteer check: Anushree (Janani).</li>
       </ul>
     </div>
-    <div class="cell bg-f4">
+    <div class="cell bg-f4" data-family="4">
+      <div class="mobile-fam-title">Family #4: Aswin &amp; Chitra</div>
       <span class="badge b-reg">Registration</span>
       <ul>
         <li><strong>EXECUTION: Registration</strong> — Food coordination, bulk cooking, etc.</li>
@@ -382,12 +516,9 @@
         <li>Kids volunteer check: Nithya Manikaraja, Vishwa Vidhya (Aswin).</li>
       </ul>
     </div>
-    <div class="cell bg-f5">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f6">
+    <div class="cell bg-f5" data-family="5" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f6" data-family="6">
+      <div class="mobile-fam-title">Family #6: Hari &amp; Srilakshmi</div>
       <span class="badge b-kids">Kids Activities (4:30–7pm)</span>
       <ul>
         <li><strong>3:30pm – 4:30pm:</strong> Kids bhajan ends.</li>
@@ -401,24 +532,23 @@
       6:30 PM<br>–<br>7:30 PM
       <span class="tag">Transitions &amp; Draw</span>
     </div>
-    <div class="cell bg-f1">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f2">
+    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f2" data-family="2">
+      <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <span class="badge b-trans">Transitions</span>
       <ul>
         <li>Manage Next Year Palaharam (Sweets/Snacks) assignments &amp; signup list (+ get info on years they have organized Pillayar Nonbu).</li>
       </ul>
     </div>
-    <div class="cell bg-f3">
+    <div class="cell bg-f3" data-family="3">
+      <div class="mobile-fam-title">Family #3: Karthik &amp; Janani</div>
       <span class="badge b-trans">Transitions</span>
       <ul>
         <li>Manage Next Year Palaharam (Sweets/Snacks) assignments &amp; signup list (+ get info on years they have organized Pillayar Nonbu).</li>
       </ul>
     </div>
-    <div class="cell bg-f4">
+    <div class="cell bg-f4" data-family="4">
+      <div class="mobile-fam-title">Family #4: Aswin &amp; Chitra</div>
       <span class="badge b-trans">Transitions &amp; Draw</span>
       <ul>
         <li><strong>6:30pm (after bhajan):</strong> Ask NSNA for PPT/Yelam Funds.</li>
@@ -427,14 +557,16 @@
         <li><strong>7:30pm:</strong> Send out NSNA Regional Rep Transition.</li>
       </ul>
     </div>
-    <div class="cell bg-f5">
+    <div class="cell bg-f5" data-family="5">
+      <div class="mobile-fam-title">Family #5: Thiru &amp; Unna</div>
       <span class="badge b-trans">Pre-Yelam</span>
       <ul>
         <li>Return gift to Sam Annan (plate with fruits).</li>
         <li>Announcement prior to Yelam.</li>
       </ul>
     </div>
-    <div class="cell bg-f6">
+    <div class="cell bg-f6" data-family="6">
+      <div class="mobile-fam-title">Family #6: Hari &amp; Srilakshmi</div>
       <span class="badge b-kids">Kids Activities</span>
       <ul>
         <li>Kids Activities ends at <strong>7:00pm</strong>.</li>
@@ -446,31 +578,31 @@
       7:30 PM<br>–<br>9:30 PM
       <span class="tag">Yelam</span>
     </div>
-    <div class="cell bg-f1">
+    <div class="cell bg-f1" data-family="1">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
       <span class="badge b-yelam">Yelam</span>
       <ul>
         <li>Muthu to help coordinate Yelam.</li>
       </ul>
     </div>
-    <div class="cell bg-f2">
+    <div class="cell bg-f2" data-family="2">
+      <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <span class="badge b-yelam">Yelam</span>
       <ul>
         <li>Full recording of Yelam event on Insta360 (Senthil).</li>
       </ul>
     </div>
-    <div class="cell bg-f3">
-      <ul>
-        <li>—</li>
-      </ul>
-    </div>
-    <div class="cell bg-f4">
+    <div class="cell bg-f3" data-family="3" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f4" data-family="4">
+      <div class="mobile-fam-title">Family #4: Aswin &amp; Chitra</div>
       <span class="badge b-trans">Draw / Transition</span>
       <ul>
         <li>Next Year Pillayar Nonbu Organizers Raffle (7pm to 8pm).</li>
         <li>NSNA Regional Rep Transition (7:30pm).</li>
       </ul>
     </div>
-    <div class="cell bg-f5">
+    <div class="cell bg-f5" data-family="5">
+      <div class="mobile-fam-title">Family #5: Thiru &amp; Unna</div>
       <span class="badge b-yelam">Yelam (7:30–9:30pm)</span>
       <ul>
         <li><strong>EXECUTION: Yelam (7:30pm – 9:30pm)</strong></li>
@@ -479,7 +611,8 @@
         <li>Muthu &amp; Sri-Laxmi help coordinate; Senthil full video coverage.</li>
       </ul>
     </div>
-    <div class="cell bg-f6">
+    <div class="cell bg-f6" data-family="6">
+      <div class="mobile-fam-title">Family #6: Hari &amp; Srilakshmi</div>
       <span class="badge b-yelam">Yelam</span>
       <ul>
         <li>Sri-Laxmi to help coordinate Yelam.</li>
@@ -495,8 +628,7 @@
     </div>
 
     <div class="pre-grid">
-      <!-- Family 1 -->
-      <div class="pre-col bg-f1">
+      <div class="pre-col bg-f1" data-family="1">
         <h3>Family #1: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox"><span>Coffee &amp; Tea Sponsorship: 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</span></li>
@@ -511,8 +643,7 @@
         </ul>
       </div>
 
-      <!-- Family 2 -->
-      <div class="pre-col bg-f2">
+      <div class="pre-col bg-f2" data-family="2">
         <h3>Family #2: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox" checked><span><span class="badge b-done">Done</span> Create Evite invitations for Thirukalyanam &amp; Pillayar Nonbu.</span></li>
@@ -530,8 +661,7 @@
         </ul>
       </div>
 
-      <!-- Family 3 -->
-      <div class="pre-col bg-f3">
+      <div class="pre-col bg-f3" data-family="3">
         <h3>Family #3: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox"><span>Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls (+ Uma).</span></li>
@@ -545,8 +675,7 @@
         </ul>
       </div>
 
-      <!-- Family 4 -->
-      <div class="pre-col bg-f4">
+      <div class="pre-col bg-f4" data-family="4">
         <h3>Family #4: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox"><span>Ask NSNA for Insurance.</span></li>
@@ -563,8 +692,7 @@
         </ul>
       </div>
 
-      <!-- Family 5 -->
-      <div class="pre-col bg-f5">
+      <div class="pre-col bg-f5" data-family="5">
         <h3>Family #5: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox"><span>Pre-planning: Maintain spreadsheet, manage logistics, set initial prices, purchase IKEA trays.</span></li>
@@ -580,8 +708,7 @@
         </ul>
       </div>
 
-      <!-- Family 6 -->
-      <div class="pre-col bg-f6">
+      <div class="pre-col bg-f6" data-family="6">
         <h3>Family #6: Action Items</h3>
         <ul class="checklist">
           <li><input type="checkbox"><span>Adult Bhajan PDF received (@Senthil email 12/15); Kids Bhajan WhatsApp group (ongoing).</span></li>
@@ -622,6 +749,19 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.mobile-filter button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.mobile-filter button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const val = btn.dataset.filter;
+        document.querySelectorAll('[data-family]').forEach(el => {
+          el.classList.toggle('is-hidden', val !== 'all' && el.dataset.family !== val);
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
