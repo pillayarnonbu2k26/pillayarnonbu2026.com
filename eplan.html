@@ -392,12 +392,12 @@
   <!-- Mobile Family Filter -->
   <div class="mobile-filter" aria-label="Filter by family">
     <button type="button" class="active" data-filter="all">All</button>
-    <button type="button" data-filter="1">F1: Muthu</button>
-    <button type="button" data-filter="2">F2: Senthil</button>
-    <button type="button" data-filter="3">F3: Karthik</button>
-    <button type="button" data-filter="4">F4: Aswin</button>
-    <button type="button" data-filter="5">F5: Thiru</button>
-    <button type="button" data-filter="6">F6: Hari</button>
+    <button type="button" data-filter="2">Senthil</button>
+    <button type="button" data-filter="3">Karthik</button>
+    <button type="button" data-filter="4">Aswin</button>
+    <button type="button" data-filter="5">Thiru</button>
+    <button type="button" data-filter="6">Hari</button>
+    <button type="button" data-filter="1">Muthu</button>
     <button type="button" data-filter="aachis">Aachis</button>
   </div>
 
@@ -409,25 +409,16 @@
 
   <div class="schedule-grid">
     <div class="cell col-header h-time">Time Slot</div>
-    <div class="cell col-header h-f1" data-family="1">Family #1<small>Murukappan Sekappan &amp; MuthuMeena Muthukaruppan</small></div>
     <div class="cell col-header h-f2" data-family="2">Family #2<small>Senthil Kasi &amp; Abirami Viswanathan</small></div>
     <div class="cell col-header h-f3" data-family="3">Family #3<small>Karthick Chockalingam &amp; Janani Muthuveerappan</small></div>
     <div class="cell col-header h-f4" data-family="4">Family #4<small>Aswin Natesh Venkatesh &amp; Chitra Lakshmanan</small></div>
     <div class="cell col-header h-f5" data-family="5">Family #5<small>Thiruvakarasu Ramananathan &amp; Unnamalai Valliappan Kannappan</small></div>
     <div class="cell col-header h-f6" data-family="6">Family #6<small>Hariharasudahan Subramanian &amp; Srilakshmi Sethu</small></div>
+    <div class="cell col-header h-f1" data-family="1">Family #1<small>Murukappan Sekappan &amp; MuthuMeena Muthukaruppan</small></div>
     <div class="cell col-header h-aachi" data-family="aachis">Aachis<small>Task Assignments</small></div>
-
-    <!-- 10:00 AM - 2:00 PM -->
     <div class="cell time-cell">
       10:00 AM<br>–<br>2:00 PM
       <span class="tag">Decoration</span>
-    </div>
-    <div class="cell bg-f1" data-family="1">
-      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
-      <span class="badge b-decor">Decoration</span>
-      <ul>
-        <li>Outside Pillayar decorations.</li>
-      </ul>
     </div>
     <div class="cell bg-f2" data-family="2" data-empty="true">
       <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
@@ -454,18 +445,19 @@
       </ul>
     </div>
     <div class="cell bg-f6" data-family="6" data-empty="true"><ul><li>—</li></ul></div>
+    <div class="cell bg-f1" data-family="1">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
+      <span class="badge b-decor">Decoration</span>
+      <ul>
+        <li>Outside Pillayar decorations.</li>
+      </ul>
+    </div>
     <div class="cell bg-aachi" data-family="aachis" data-empty="true">
       <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
     </div>
-
-    <!-- 2:00 PM - 4:00 PM -->
     <div class="cell time-cell">
       2:00 PM<br>–<br>4:00 PM
-    </div>
-    <div class="cell bg-f1" data-family="1" data-empty="true">
-      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
-      <ul><li>—</li></ul>
     </div>
     <div class="cell bg-f2" data-family="2" data-empty="true"><ul><li>—</li></ul></div>
     <div class="cell bg-f3" data-family="3" data-empty="true"><ul><li>—</li></ul></div>
@@ -480,17 +472,18 @@
         <li><strong>3:30pm – 4:30pm:</strong> Kids bhajan (1 hr).</li>
       </ul>
     </div>
+    <div class="cell bg-f1" data-family="1" data-empty="true">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
+      <ul><li>—</li></ul>
+    </div>
     <div class="cell bg-aachi" data-family="aachis" data-empty="true">
       <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
     </div>
-
-    <!-- 4:00 PM - 6:30 PM -->
     <div class="cell time-cell">
       4:00 PM<br>–<br>6:30 PM
       <span class="tag">Kids &amp; Reg</span>
     </div>
-    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
     <div class="cell bg-f2" data-family="2">
       <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <span class="badge b-reg">Registration (4–6pm)</span>
@@ -527,17 +520,15 @@
         <li>Volunteers: Anushree (Janani), Nithya Manikaraja (Aswin), Vishwa Vidhya (Aswin), Sudha Vasu (Senthil/Abi), Chittu Bala (Senthil/Abi).</li>
       </ul>
     </div>
+    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
     <div class="cell bg-aachi" data-family="aachis" data-empty="true">
       <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
     </div>
-
-    <!-- 6:30 PM - 7:30 PM -->
     <div class="cell time-cell">
       6:30 PM<br>–<br>7:30 PM
       <span class="tag">Transitions &amp; Draw</span>
     </div>
-    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
     <div class="cell bg-f2" data-family="2">
       <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
       <span class="badge b-trans">Transitions</span>
@@ -577,22 +568,14 @@
         <li>Kids Activities ends at <strong>7:00pm</strong>.</li>
       </ul>
     </div>
+    <div class="cell bg-f1" data-family="1" data-empty="true"><ul><li>—</li></ul></div>
     <div class="cell bg-aachi" data-family="aachis" data-empty="true">
       <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
     </div>
-
-    <!-- 7:30 PM - 9:30 PM -->
     <div class="cell time-cell">
       7:30 PM<br>–<br>9:30 PM
       <span class="tag">Yelam</span>
-    </div>
-    <div class="cell bg-f1" data-family="1">
-      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
-      <span class="badge b-yelam">Yelam</span>
-      <ul>
-        <li>Muthu to help coordinate Yelam.</li>
-      </ul>
     </div>
     <div class="cell bg-f2" data-family="2">
       <div class="mobile-fam-title">Family #2: Senthil &amp; Abi</div>
@@ -627,6 +610,13 @@
         <li>Sri-Laxmi to help coordinate Yelam.</li>
       </ul>
     </div>
+    <div class="cell bg-f1" data-family="1">
+      <div class="mobile-fam-title">Family #1: Muthu &amp; Meena</div>
+      <span class="badge b-yelam">Yelam</span>
+      <ul>
+        <li>Muthu to help coordinate Yelam.</li>
+      </ul>
+    </div>
     <div class="cell bg-aachi" data-family="aachis" data-empty="true">
       <div class="mobile-fam-title">Aachis</div>
       <ul><li>—</li></ul>
@@ -641,18 +631,6 @@
     </div>
 
     <div class="pre-grid">
-      <div class="pre-col bg-f1" data-family="1">
-        <h3>Family #1: Action Items</h3>
-        <ul>
-          <li><strong>Coffee &amp; Tea Request (Sponsorship):</strong> 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</li>
-          <li><strong>Volunteers to Bring (Pickup):</strong> 11am — Find volunteer; 3pm — Senthamarai Kannan / Chokalingam (Hari).</li>
-        </ul>
-        <h3>Do Not Forget to Bring</h3>
-        <ul>
-          <li>Outside Pillayar decorations.</li>
-        </ul>
-      </div>
-
       <div class="pre-col bg-f2" data-family="2">
         <h3>Family #2: Action Items</h3>
         <ul>
@@ -753,6 +731,18 @@
           <li>Camping Tarp 8x10 tarp (please bring).</li>
           <li>100 painted bookmarks.</li>
           <li><strong>Have:</strong> Dinner plates (Done); &gt;1,000 coffee cups; 2,000 paper napkins (don't buy); 26 cloth aprons; 5 hot serving trays (Kandharpam only); 6 burners; stirrers; cleaning solution.</li>
+        </ul>
+      </div>
+
+      <div class="pre-col bg-f1" data-family="1">
+        <h3>Family #1: Action Items</h3>
+        <ul>
+          <li><strong>Coffee &amp; Tea Request (Sponsorship):</strong> 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</li>
+          <li><strong>Volunteers to Bring (Pickup):</strong> 11am — Find volunteer; 3pm — Senthamarai Kannan / Chokalingam (Hari).</li>
+        </ul>
+        <h3>Do Not Forget to Bring</h3>
+        <ul>
+          <li>Outside Pillayar decorations.</li>
         </ul>
       </div>
 
