@@ -386,6 +386,8 @@ action_items:
     - title: 'Aswin & Chitra: Action Items'
       items:
         - status: Open
+          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+        - status: Open
           item: Ask NSNA for Insurance.
         - status: Open
           item: '**Costco (Dec 1–4):**'
@@ -428,6 +430,8 @@ action_items:
   hari:
     - title: 'Hari & Srilaxmi: Action Items'
       items:
+        - status: Open
+          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
         - status: null
           item: '**Kids Activities**'
           sub_items:
@@ -478,6 +482,8 @@ action_items:
     - title: 'Karthik & Janani: Action Items'
       items:
         - status: Open
+          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+        - status: Open
           item: Stage Pillayar idol (Veshti & Garland) & Flowers (Pillayar, Poojai, hairpins/flowers for girls).
         - status: Open
           item: 'Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls.'
@@ -499,6 +505,8 @@ action_items:
   senthil:
     - title: 'Senthil & Abi: Action Items'
       items:
+        - status: Open
+          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
         - status: Done
           item: Create Evite invitations for Thirukalyanam & Pillayar Nonbu.
         - status: Done
@@ -521,6 +529,11 @@ action_items:
 
   # ==================== Thiru & Unna ====================
   thiru:
+    - title: 'Thiru & Unna: Action Items'
+      items:
+        - status: Open
+          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+
     - title: 'Thiru & Unna: Bring from India'
       items:
         - status: Done

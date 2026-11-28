@@ -85,6 +85,63 @@
       color: var(--accent);
     }
 
+    .countdown-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 10px 14px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow);
+    }
+    .countdown-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .countdown-sub {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+    .countdown-units {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cd-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 54px;
+      padding: 5px 8px;
+      border-radius: 8px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(122, 46, 34, 0.14);
+    }
+    .cd-val {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+    .cd-unit {
+      font-size: 9.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
     .mobile-filter {
       display: flex;
       align-items: center;
@@ -421,7 +478,7 @@
       body { padding: 0; background: #fff; font-size: 9.5px; }
       @page { size: landscape; margin: 0.3in; }
       .col-header { position: static; }
-      .mobile-filter, .mobile-fam-title, .header-actions { display: none !important; }
+      .mobile-filter, .mobile-fam-title, .header-actions, .countdown-bar { display: none !important; }
       .schedule-grid, .pre-grid { box-shadow: none; border-radius: 0; }
       .bottom-section { page-break-before: always; }
     }
@@ -438,6 +495,20 @@
       <a class="jump-link" href="#schedule">Schedule</a>
       <a class="jump-link" href="#action-items">Action Items</a>
       <button type="button" class="print-btn" onclick="window.print()">Print</button>
+    </div>
+  </div>
+
+  <!-- Countdown Banner -->
+  <div class="countdown-bar" aria-live="polite">
+    <div>
+      <div class="countdown-label">Countdown to Pillayar Nonbu 2026</div>
+      <div class="countdown-sub">Saturday, December 19, 2026 at 10:00 AM PST</div>
+    </div>
+    <div class="countdown-units" id="countdown-units">
+      <div class="cd-box"><span class="cd-val" id="cd-days">--</span><span class="cd-unit">Days</span></div>
+      <div class="cd-box"><span class="cd-val" id="cd-hours">--</span><span class="cd-unit">Hours</span></div>
+      <div class="cd-box"><span class="cd-val" id="cd-mins">--</span><span class="cd-unit">Mins</span></div>
+      <div class="cd-box"><span class="cd-val" id="cd-secs">--</span><span class="cd-unit">Secs</span></div>
     </div>
   </div>
 
@@ -774,6 +845,7 @@
       <div class="pre-col bg-f4" data-family="aswin">
         <h3>Aswin &amp; Chitra: Action Items</h3>
         <ul>
+          <li><span class="badge b-open">Open</span> IMP! - Buy &amp; Supply or Reimburse for Small Cooking + Supply Foil Trays</li>
           <li><span class="badge b-open">Open</span> Ask NSNA for Insurance.</li>
           <li><span class="badge b-open">Open</span> <strong>Costco (Dec 1–4):</strong>
             <ul>
@@ -804,6 +876,7 @@
       <div class="pre-col bg-f6" data-family="hari">
         <h3>Hari &amp; Srilaxmi: Action Items</h3>
         <ul>
+          <li><span class="badge b-open">Open</span> IMP! - Buy &amp; Supply or Reimburse for Small Cooking + Supply Foil Trays</li>
           <li><strong>Kids Activities</strong>
             <ul>
               <li><span class="badge b-open">Open</span> 100 painting bookmarks.</li>
@@ -845,6 +918,7 @@
       <div class="pre-col bg-f3" data-family="karthik">
         <h3>Karthik &amp; Janani: Action Items</h3>
         <ul>
+          <li><span class="badge b-open">Open</span> IMP! - Buy &amp; Supply or Reimburse for Small Cooking + Supply Foil Trays</li>
           <li><span class="badge b-open">Open</span> Stage Pillayar idol (Veshti &amp; Garland) &amp; Flowers (Pillayar, Poojai, hairpins/flowers for girls).</li>
           <li><span class="badge b-open">Open</span> Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls.</li>
           <li><span class="badge b-open">Open</span> Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</li>
@@ -860,6 +934,7 @@
       <div class="pre-col bg-f2" data-family="senthil">
         <h3>Senthil &amp; Abi: Action Items</h3>
         <ul>
+          <li><span class="badge b-open">Open</span> IMP! - Buy &amp; Supply or Reimburse for Small Cooking + Supply Foil Trays</li>
           <li><span class="badge b-done">Done</span> Create Evite invitations for Thirukalyanam &amp; Pillayar Nonbu.</li>
           <li><span class="badge b-done">Done</span> Procure Raffle tickets for Yelai numbers.</li>
           <li><span class="badge b-open">Open</span> Email Adult Bhajan PDF + Yelam Beneficiaries / Items PDF on 12/15.</li>
@@ -874,6 +949,10 @@
         </ul>
       </div>
       <div class="pre-col bg-f5" data-family="thiru">
+        <h3>Thiru &amp; Unna: Action Items</h3>
+        <ul>
+          <li><span class="badge b-open">Open</span> IMP! - Buy &amp; Supply or Reimburse for Small Cooking + Supply Foil Trays</li>
+        </ul>
         <h3>Thiru &amp; Unna: Bring from India</h3>
         <ul>
           <li><span class="badge b-done">Done</span> Yelai Thalapa Thundu.</li>
@@ -978,6 +1057,36 @@
       });
     });
     window.addEventListener('resize', () => updateMobileTimeHeaders(activeFilter));
+
+    (function initCountdown() {
+      const targetMs = new Date('2026-12-19T10:00:00-08:00').getTime();
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-mins');
+      const secsEl = document.getElementById('cd-secs');
+      const containerEl = document.getElementById('countdown-units');
+
+      function update() {
+        const diff = targetMs - Date.now();
+        if (diff <= 0) {
+          containerEl.innerHTML = '<div class="cd-box" style="padding:6px 14px;"><span class="cd-val" style="font-size:14px;">Event Day is Here!</span></div>';
+          return;
+        }
+        const totalSecs = Math.floor(diff / 1000);
+        const days = Math.floor(totalSecs / 86400);
+        const hours = Math.floor((totalSecs % 86400) / 3600);
+        const mins = Math.floor((totalSecs % 3600) / 60);
+        const secs = totalSecs % 60;
+
+        daysEl.textContent = String(days);
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minsEl.textContent = String(mins).padStart(2, '0');
+        secsEl.textContent = String(secs).padStart(2, '0');
+      }
+
+      update();
+      setInterval(update, 1000);
+    })();
   </script>
 
 </body>
