@@ -386,7 +386,7 @@ action_items:
     - title: 'Aswin & Chitra: Action Items'
       items:
         - status: Open
-          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+          item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
         - status: Open
           item: Ask NSNA for Insurance.
         - status: Open
@@ -431,7 +431,7 @@ action_items:
     - title: 'Hari & Srilaxmi: Action Items'
       items:
         - status: Open
-          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+          item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
         - status: null
           item: '**Kids Activities**'
           sub_items:
@@ -482,7 +482,7 @@ action_items:
     - title: 'Karthik & Janani: Action Items'
       items:
         - status: Open
-          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+          item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
         - status: Open
           item: Stage Pillayar idol (Veshti & Garland) & Flowers (Pillayar, Poojai, hairpins/flowers for girls).
         - status: Open
@@ -506,7 +506,7 @@ action_items:
     - title: 'Senthil & Abi: Action Items'
       items:
         - status: Open
-          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+          item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
         - status: Done
           item: Create Evite invitations for Thirukalyanam & Pillayar Nonbu.
         - status: Done
@@ -532,7 +532,7 @@ action_items:
     - title: 'Thiru & Unna: Action Items'
       items:
         - status: Open
-          item: IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays
+          item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
 
     - title: 'Thiru & Unna: Bring from India'
       items:
