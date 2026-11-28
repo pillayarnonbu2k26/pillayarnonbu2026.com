@@ -425,6 +425,10 @@ action_items:
           item: '**Previous Evening:** 1 full propane tank + 1 propane stove.'
         - status: null
           item: Power strips & fire extinguisher, tarp, moving blanket, cam locks & straps, heavy duty power, knife, lighter, torch, cable ties, blue tape.
+        - status: null
+          item: Print, Cut & Roll next year organizers
+        - status: null
+          item: Print, Cut & Roll Palakaram sheet
 
   # ==================== Hari & Srilaxmi ====================
   hari:
@@ -459,16 +463,8 @@ action_items:
               item: '1 hr — Adult Bhajan: PDF Received.'
             - status: Open
               item: '1 hr — Kids Bhajan: Create a WhatsApp group (ongoing).'
-        - status: null
-          item: '**Shopping**'
-          sub_items:
-            - status: Open
-              item: '**Amazon:**'
-              sub_items:
-                - status: null
-                  item: Trashbags (30 gal)
-            - status: Open
-              item: '**Dollar Tree / Amazon:** Table covers: Round (40).'
+        - status: Open
+          item: '**Flowers (25 boxes, ~$350):** 24 boxes for guests (5 ft/box, 15 pcs/box ≈ 275 pcs) + 1 box for Pillaiyar ($14/box retail, $1–$2 off TBD).'
 
     - title: Do Not Forget to Bring
       items:
@@ -533,6 +529,8 @@ action_items:
       items:
         - status: Open
           item: '**IMP! - Buy & Supply or Reimburse for Small Cooking + Supply Foil Trays**'
+        - status: Open
+          item: 'Stage Pillayar Malai: Confirmed by AL Alagu Aunty — arrange Fremont drop-off (previous evening).'
 
     - title: 'Thiru & Unna: Bring from India'
       items:
@@ -579,7 +577,12 @@ action_items:
     - title: 'Muthu & Meena: Action Items'
       items:
         - status: Open
-          item: '**Coffee & Tea Request (Sponsorship):** 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).'
+          item: '**Coffee & Tea Request:**'
+          sub_items:
+            - status: null
+              item: 11am (70 coffee + 100 tea)
+            - status: null
+              item: 3pm (200 coffee + 400 tea)
         - status: Open
           item: '**Volunteers to Bring (Pickup):**'
           sub_items:
