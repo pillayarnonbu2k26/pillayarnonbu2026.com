@@ -255,6 +255,7 @@
     .b-food { background: #ffedd5; color: #9a3412; }
     .b-stage { background: #fee2e2; color: #b91c1c; }
     .b-done { background: #d1fae5; color: #065f46; }
+    .b-open { background: #fef3c7; color: #92400e; }
 
     .bottom-section {
       page-break-before: always;
@@ -443,12 +444,12 @@
   <!-- Family Filter Bar -->
   <div class="mobile-filter" aria-label="Filter by family">
     <button type="button" class="active" data-filter="all">All</button>
-    <button type="button" data-filter="4">Aswin</button>
-    <button type="button" data-filter="6">Hari</button>
-    <button type="button" data-filter="3">Karthik</button>
-    <button type="button" data-filter="2">Senthil</button>
-    <button type="button" data-filter="5">Thiru</button>
-    <button type="button" data-filter="1">Muthu</button>
+    <button type="button" data-filter="aswin">Aswin</button>
+    <button type="button" data-filter="hari">Hari</button>
+    <button type="button" data-filter="karthik">Karthik</button>
+    <button type="button" data-filter="senthil">Senthil</button>
+    <button type="button" data-filter="thiru">Thiru</button>
+    <button type="button" data-filter="muthu">Muthu</button>
     <button type="button" data-filter="aachis">Aachis</button>
   </div>
 
@@ -460,17 +461,17 @@
 
   <div class="schedule-grid">
     <div class="cell col-header h-time">Time Slot</div>
-    <div class="cell col-header h-f4" data-family="4">Aswin &amp; Chitra</div>
-    <div class="cell col-header h-f6" data-family="6">Hari &amp; Srilaxmi</div>
-    <div class="cell col-header h-f3" data-family="3">Karthik &amp; Janani</div>
-    <div class="cell col-header h-f2" data-family="2">Senthil &amp; Abi</div>
-    <div class="cell col-header h-f5" data-family="5">Thiru &amp; Unna</div>
-    <div class="cell col-header h-f1" data-family="1">Muthu &amp; Meena</div>
+    <div class="cell col-header h-f4" data-family="aswin">Aswin &amp; Chitra</div>
+    <div class="cell col-header h-f6" data-family="hari">Hari &amp; Srilaxmi</div>
+    <div class="cell col-header h-f3" data-family="karthik">Karthik &amp; Janani</div>
+    <div class="cell col-header h-f2" data-family="senthil">Senthil &amp; Abi</div>
+    <div class="cell col-header h-f5" data-family="thiru">Thiru &amp; Unna</div>
+    <div class="cell col-header h-f1" data-family="muthu">Muthu &amp; Meena</div>
     <div class="cell col-header h-aachi" data-family="aachis">Aachis</div>
     <div class="cell time-cell">
       10:00 AM<br>–<br>2:00 PM
     </div>
-    <div class="cell bg-f4" data-family="4">
+    <div class="cell bg-f4" data-family="aswin">
       <div class="mobile-fam-title">Aswin &amp; Chitra</div>
       <span class="badge b-trans">Setup</span>
       <ul>
@@ -478,29 +479,37 @@
         <li>Onsite cooking.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6">
+    <div class="cell bg-f6" data-family="hari">
       <div class="mobile-fam-title">Hari &amp; Srilaxmi</div>
       <span class="badge b-trans">Setup</span>
       <ul>
         <li>Floor plan layout.</li>
         <li>Onsite cooking.</li>
       </ul>
+      <span class="badge b-decor" style="margin-top:6px;">Decoration</span>
+      <ul>
+        <li>Bring Entryway Pillayar — Janani &amp; Srilaxmi to decorate.</li>
+      </ul>
     </div>
-    <div class="cell bg-f3" data-family="3">
+    <div class="cell bg-f3" data-family="karthik">
       <div class="mobile-fam-title">Karthik &amp; Janani</div>
       <span class="badge b-trans">Setup</span>
       <ul>
         <li>Floor plan layout.</li>
       </ul>
+      <span class="badge b-decor" style="margin-top:6px;">Decoration</span>
+      <ul>
+        <li>Bring Entryway Pillayar — Janani &amp; Srilaxmi to decorate.</li>
+      </ul>
     </div>
-    <div class="cell bg-f2" data-family="2">
+    <div class="cell bg-f2" data-family="senthil">
       <div class="mobile-fam-title">Senthil &amp; Abi</div>
       <span class="badge b-decor">Decoration</span>
       <ul>
         <li>Lobby area decoration</li>
       </ul>
     </div>
-    <div class="cell bg-f5" data-family="5">
+    <div class="cell bg-f5" data-family="thiru">
       <div class="mobile-fam-title">Thiru &amp; Unna</div>
       <span class="badge b-decor">Decoration</span>
       <ul>
@@ -509,7 +518,7 @@
         <li>Yelam item setup.</li>
       </ul>
     </div>
-    <div class="cell bg-f1" data-family="1">
+    <div class="cell bg-f1" data-family="muthu">
       <div class="mobile-fam-title">Muthu &amp; Meena</div>
       <span class="badge b-decor">Decoration</span>
       <ul>
@@ -529,7 +538,7 @@
     <div class="cell time-cell">
       2:00 PM<br>–<br>4:00 PM
     </div>
-    <div class="cell bg-f4" data-family="4">
+    <div class="cell bg-f4" data-family="aswin">
       <div class="mobile-fam-title">Aswin &amp; Chitra</div>
       <span class="badge b-food">Food</span>
       <ul>
@@ -537,36 +546,36 @@
         <li>Bulk cooking layout.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6">
+    <div class="cell bg-f6" data-family="hari">
       <div class="mobile-fam-title">Hari &amp; Srilaxmi</div>
       <span class="badge b-stage">ON STAGE</span>
       <ul>
-        <li><strong>2:30pm:</strong> Adults bhajan (1 hr).</li>
-        <li><strong>3:30pm:</strong> Kids bhajan (1 hr).</li>
+        <li><strong>2:30pm</strong>: Adults bhajan (1 hr).</li>
+        <li><strong>3:30pm</strong>: Kids bhajan (1 hr).</li>
       </ul>
     </div>
-    <div class="cell bg-f3" data-family="3">
+    <div class="cell bg-f3" data-family="karthik">
       <div class="mobile-fam-title">Karthik &amp; Janani</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f2" data-family="2">
+    <div class="cell bg-f2" data-family="senthil">
       <div class="mobile-fam-title">Senthil &amp; Abi</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f5" data-family="5">
+    <div class="cell bg-f5" data-family="thiru">
       <div class="mobile-fam-title">Thiru &amp; Unna</div>
       <span class="badge b-stage">ON STAGE</span>
       <ul>
         <li>Look after Yelam items.</li>
       </ul>
     </div>
-    <div class="cell bg-f1" data-family="1">
+    <div class="cell bg-f1" data-family="muthu">
       <div class="mobile-fam-title">Muthu &amp; Meena</div>
       <span class="badge b-stage">ON STAGE</span>
       <ul>
@@ -580,7 +589,7 @@
     <div class="cell time-cell">
       4:00 PM<br>–<br>6:30 PM
     </div>
-    <div class="cell bg-f4" data-family="4">
+    <div class="cell bg-f4" data-family="aswin">
       <div class="mobile-fam-title">Aswin &amp; Chitra</div>
       <span class="badge b-food">Food</span>
       <ul>
@@ -588,7 +597,7 @@
         <li>Transfer food.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6">
+    <div class="cell bg-f6" data-family="hari">
       <div class="mobile-fam-title">Hari &amp; Srilaxmi</div>
       <span class="badge b-food">Food</span>
       <ul>
@@ -596,29 +605,29 @@
         <li>Transfer food.</li>
       </ul>
     </div>
-    <div class="cell bg-f3" data-family="3">
+    <div class="cell bg-f3" data-family="karthik">
       <div class="mobile-fam-title">Karthik &amp; Janani</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f2" data-family="2">
+    <div class="cell bg-f2" data-family="senthil">
       <div class="mobile-fam-title">Senthil &amp; Abi</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f5" data-family="5">
+    <div class="cell bg-f5" data-family="thiru">
       <div class="mobile-fam-title">Thiru &amp; Unna</div>
       <span class="badge b-stage">On Stage</span>
       <ul>
-        <li><strong>5:30pm:</strong> Play NSNA PPT/Yelam promo.</li>
-        <li><strong>5:45pm:</strong> Play slideshow of cooking volunteers.</li>
+        <li><strong>5:30pm</strong>: Play NSNA PPT/Yelam promo.</li>
+        <li><strong>5:45pm</strong>: Play slideshow of cooking volunteers.</li>
       </ul>
     </div>
-    <div class="cell bg-f1" data-family="1">
+    <div class="cell bg-f1" data-family="muthu">
       <div class="mobile-fam-title">Muthu &amp; Meena</div>
       <span class="badge b-stage">On Stage</span>
       <ul>
@@ -637,15 +646,15 @@
     <div class="cell time-cell">
       6:30 PM<br>–<br>7:30 PM
     </div>
-    <div class="cell bg-f4" data-family="4">
+    <div class="cell bg-f4" data-family="aswin">
       <div class="mobile-fam-title">Aswin &amp; Chitra</div>
       <span class="badge b-stage">On Stage</span>
       <ul>
-        <li><strong>6:30pm:</strong> NCNA app demo by Shree.</li>
-        <li><strong>7:00pm:</strong> NSNA Regional Rep Transition.</li>
+        <li><strong>6:30pm</strong>: NCNA app demo by Shree.</li>
+        <li><strong>7:00pm</strong>: NSNA Regional Rep Transition.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6">
+    <div class="cell bg-f6" data-family="hari">
       <div class="mobile-fam-title">Hari &amp; Srilaxmi</div>
       <span class="badge b-food">Food</span>
       <ul>
@@ -653,33 +662,33 @@
         <li>Transfer food.</li>
       </ul>
     </div>
-    <div class="cell bg-f3" data-family="3">
+    <div class="cell bg-f3" data-family="karthik">
       <div class="mobile-fam-title">Karthik &amp; Janani</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f2" data-family="2">
+    <div class="cell bg-f2" data-family="senthil">
       <div class="mobile-fam-title">Senthil &amp; Abi</div>
       <span class="badge b-reg">Registration Desk</span>
       <ul>
-        <li><strong>Registration Desk:</strong> Payment + Palakaram + Return gifts + Year of Arrival.</li>
+        <li><strong>Registration Desk:</strong> Payment + Yelai Token + Palakaram + Return gifts + Year of Arrival.</li>
       </ul>
     </div>
-    <div class="cell bg-f5" data-family="5">
+    <div class="cell bg-f5" data-family="thiru">
       <div class="mobile-fam-title">Thiru &amp; Unna</div>
       <span class="badge b-stage">ON STAGE</span>
       <ul>
         <li>Look after Yelam items.</li>
       </ul>
     </div>
-    <div class="cell bg-f1" data-family="1">
+    <div class="cell bg-f1" data-family="muthu">
       <div class="mobile-fam-title">Muthu &amp; Meena</div>
       <span class="badge b-stage">On Stage</span>
       <ul>
         <li>Roll call for Yelai.</li>
-        <li><strong>7:15pm:</strong> Next Year Pillayar Nonbu Organizers Draw.</li>
+        <li><strong>7:15pm</strong>: Next Year Pillayar Nonbu Organizers Draw.</li>
       </ul>
     </div>
     <div class="cell bg-aachi" data-family="aachis">
@@ -693,14 +702,14 @@
     <div class="cell time-cell">
       7:30 PM<br>–<br>9:30 PM
     </div>
-    <div class="cell bg-f4" data-family="4">
+    <div class="cell bg-f4" data-family="aswin">
       <div class="mobile-fam-title">Aswin &amp; Chitra</div>
       <span class="badge b-food">Food</span>
       <ul>
         <li>Dining area coordination and cleanup.</li>
       </ul>
     </div>
-    <div class="cell bg-f6" data-family="6">
+    <div class="cell bg-f6" data-family="hari">
       <div class="mobile-fam-title">Hari &amp; Srilaxmi</div>
       <span class="badge b-stage">On Stage (Yelam)</span>
       <ul>
@@ -708,14 +717,14 @@
         <li>Track Yelam spreadsheet.</li>
       </ul>
     </div>
-    <div class="cell bg-f3" data-family="3">
+    <div class="cell bg-f3" data-family="karthik">
       <div class="mobile-fam-title">Karthik &amp; Janani</div>
       <span class="badge b-food">Food</span>
       <ul>
         <li>Dining area coordination and cleanup.</li>
       </ul>
     </div>
-    <div class="cell bg-f2" data-family="2">
+    <div class="cell bg-f2" data-family="senthil">
       <div class="mobile-fam-title">Senthil &amp; Abi</div>
       <span class="badge b-stage">On Stage (Yelam)</span>
       <ul>
@@ -723,7 +732,7 @@
         <li>Find volunteer for photos.</li>
       </ul>
     </div>
-    <div class="cell bg-f5" data-family="5">
+    <div class="cell bg-f5" data-family="thiru">
       <div class="mobile-fam-title">Thiru &amp; Unna</div>
       <span class="badge b-stage">On Stage (Yelam)</span>
       <ul>
@@ -732,7 +741,7 @@
         <li>Yelam slideshow.</li>
       </ul>
     </div>
-    <div class="cell bg-f1" data-family="1">
+    <div class="cell bg-f1" data-family="muthu">
       <div class="mobile-fam-title">Muthu &amp; Meena</div>
       <span class="badge b-stage">On Stage (Yelam)</span>
       <ul>
@@ -762,78 +771,98 @@
     </div>
 
     <div class="pre-grid">
-      <div class="pre-col bg-f4" data-family="4">
+      <div class="pre-col bg-f4" data-family="aswin">
         <h3>Aswin &amp; Chitra: Action Items</h3>
         <ul>
-          <li>10:00 AM: Chopping volunteers at ICC (onions, tomatoes, brinjals).</li>
-          <li>Ask NSNA for Insurance.</li>
-          <li>Return Gift (Calendar): Coordinate with Narayanan (Real Estate).</li>
-          <li>Confirm Kids volunteers: Nithya Manikaraja, Vishwa Vidhya.</li>
-          <li><strong>Dec 18 (Costco Business Center):</strong> 22 units of water ($220).</li>
-          <li><strong>Costco (Dec 1–4):</strong> Aluminium trays (8 big chutney) &amp; lids; Bounty rolls; Water bottles: 1,200 dinner + 300 lunch + 500 whole day (return leftovers); Costco paper plates (1 pack / 100 plates); Snacks + Oreo.</li>
-          <li><strong>Harbor Freight / Home Depot:</strong> Buy tarp (return if unused), Cam locks &amp; straps, Power heavy duty.</li>
+          <li><span class="badge b-open">Open</span> Ask NSNA for Insurance.</li>
+          <li><span class="badge b-open">Open</span> <strong>Costco (Dec 1–4):</strong>
+            <ul>
+              <li>Aluminium trays (8 big chutney) &amp; lids</li>
+              <li>Bounty rolls</li>
+              <li>Costco paper plates (1 pack / 100 plates)</li>
+              <li>Snacks + Oreo</li>
+            </ul>
+          </li>
+          <li><span class="badge b-open">Open</span> <strong>Harbor Freight:</strong> Buy tarp (return if unused).</li>
+          <li><span class="badge b-open">Open</span> <strong>Home Depot:</strong> Tote Boxes (5 pcs).</li>
+          <li><span class="badge b-open">Open</span> <strong>Bulk Cooking:</strong>
+            <ol style="padding-left:18px;margin-top:4px;">
+              <li>Call for 4pm chopping volunteers - previous day</li>
+              <li>Call for 10am chopping volunteers</li>
+              <li>Call for logistics volunteers</li>
+              <li>Call for restaurant equipment</li>
+              <li><span class="badge b-open">Open</span> Cleaning staff — enquired and booked.</li>
+            </ol>
+          </li>
         </ul>
         <h3>Do Not Forget to Bring</h3>
         <ul>
-          <li><strong>Previous Evening:</strong> 1 full propane tank.</li>
-          <li>Power strips &amp; fire extinguisher.</li>
-          <li>22 units water, tarp, cam locks &amp; straps, heavy duty power.</li>
+          <li><strong>Previous Evening:</strong> 1 full propane tank + 1 propane stove.</li>
+          <li>Power strips &amp; fire extinguisher, tarp, moving blanket, cam locks &amp; straps, heavy duty power, knife, lighter, torch, cable ties, blue tape.</li>
         </ul>
       </div>
-
-      <div class="pre-col bg-f6" data-family="6">
-        <h3>Hari &amp; Srilaxmi<br>1. Kids Activities</h3>
+      <div class="pre-col bg-f6" data-family="hari">
+        <h3>Hari &amp; Srilaxmi: Action Items</h3>
         <ul>
-          <li>100 bookmarks / painted.</li>
-          <li>Coloring Pillayar picture — Meena Aachi to print.</li>
-          <li>Crayons available.</li>
-          <li>Volunteers: Janani, Abi, Anushree, Nithya Manikaraja, Vishwa Vidhya, Sudha Vasu, Chittu Bala.</li>
+          <li><strong>Kids Activities</strong>
+            <ul>
+              <li><span class="badge b-open">Open</span> 100 painting bookmarks.</li>
+              <li><span class="badge b-open">Open</span> Coloring Pillayar picture — Meena Aachi to print.</li>
+              <li><span class="badge b-open">Open</span> Call for Volunteers
+                <ul>
+                  <li>Anushree for help can volunteer? (Janani)</li>
+                  <li>Nithya Manikaraja can volunteer? (Aswin)</li>
+                  <li>Vishwa Vidhya can volunteer? (Aswin)</li>
+                  <li>Sudha Vasu can volunteer? (Senthil/Abi)</li>
+                  <li>Chittu Bala ? (Senthil/Abi)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><strong>Bhajan</strong>
+            <ul>
+              <li><span class="badge b-done">Done</span> 1 hr — Adult Bhajan: PDF Received.</li>
+              <li><span class="badge b-open">Open</span> 1 hr — Kids Bhajan: Create a WhatsApp group (ongoing).</li>
+            </ul>
+          </li>
+          <li><strong>Shopping</strong>
+            <ul>
+              <li><span class="badge b-open">Open</span> <strong>Amazon:</strong>
+                <ul>
+                  <li>Trashbags (30 gal)</li>
+                </ul>
+              </li>
+              <li><span class="badge b-open">Open</span> <strong>Dollar Tree / Amazon:</strong> Table covers: Round (40).</li>
+            </ul>
+          </li>
         </ul>
-
-        <h3>2. Bhajan</h3>
-        <ul>
-          <li>1 hr — Adult Bhajan: PDF Received.</li>
-          <li>1 hr — Kids Bhajan: Create a WhatsApp group (ongoing).</li>
-        </ul>
-
-        <h3>3. Cleaning &amp; Shopping</h3>
-        <ul>
-          <li>Cleaning staff — enquired and booked.</li>
-          <li><strong>Amazon:</strong> All list of items as discussed on Amazon.</li>
-          <li><strong>Dollar Tree / Amazon:</strong> Table covers: Rectangle (30) &amp; Round (40).</li>
-          <li><strong>Other Supplies:</strong> Cleaning supplies &amp; sponge: Scrubber (10 metal + 10 sponge); Spoons (2,000); Serving spoons (12); Palakaram tongs (12); Aprons: 200 plastic aprons; Gloves: 1 pack of 200 pairs (plastic food grade); Trashbags (30 gal); Sugar in cup (2 small packs); Boat cup for snacks (300).</li>
-        </ul>
-
-        <h3>4. Bring</h3>
+        <h3>Do Not Forget to Bring</h3>
         <ul>
           <li>Camping Tarp 8x10 tarp (please bring).</li>
-          <li>100 painted bookmarks.</li>
+          <li>100 painting bookmarks.</li>
         </ul>
       </div>
-
-      <div class="pre-col bg-f3" data-family="3">
+      <div class="pre-col bg-f3" data-family="karthik">
         <h3>Karthik &amp; Janani: Action Items</h3>
         <ul>
-          <li>Stage Pillayar idol (Veshti &amp; Garland) &amp; Flowers (Pillayar, Poojai, hairpins/flowers for girls).</li>
-          <li>Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls.</li>
-          <li>Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</li>
-          <li>Confirm Kids volunteer: Anushree.</li>
+          <li><span class="badge b-open">Open</span> Stage Pillayar idol (Veshti &amp; Garland) &amp; Flowers (Pillayar, Poojai, hairpins/flowers for girls).</li>
+          <li><span class="badge b-open">Open</span> Wholesale Flowers Sponsorship: Coordinate with Alagu (408-464-4532) for Pillayar, Poojai, hairpins/flowers for girls.</li>
+          <li><span class="badge b-open">Open</span> Confirm Sigappi Narayanan to bring 100 vadai earlier for prayer.</li>
+          <li><span class="badge b-open">Open</span> Confirm Kids volunteer: Anushree.</li>
         </ul>
         <h3>Do Not Forget to Bring</h3>
         <ul>
           <li>Camping Tarp 8x10 tarp.</li>
           <li>Stage Pillayar idol (Veshti &amp; Garland).</li>
+          <li>Bring Entryway Pillayar — Janani &amp; Srilaxmi to decorate.</li>
         </ul>
       </div>
-
-      <div class="pre-col bg-f2" data-family="2">
+      <div class="pre-col bg-f2" data-family="senthil">
         <h3>Senthil &amp; Abi: Action Items</h3>
         <ul>
           <li><span class="badge b-done">Done</span> Create Evite invitations for Thirukalyanam &amp; Pillayar Nonbu.</li>
           <li><span class="badge b-done">Done</span> Procure Raffle tickets for Yelai numbers.</li>
-          <li>Abi to lend camera to Sruti to take candid photos.</li>
-          <li>Email Adult Bhajan PDF on 12/15.</li>
-          <li>Confirm Kids volunteers: Sudha Vasu, Chittu Bala.</li>
+          <li><span class="badge b-open">Open</span> Email Adult Bhajan PDF + Yelam Beneficiaries / Items PDF on 12/15.</li>
         </ul>
         <h3>Do Not Forget to Bring</h3>
         <ul>
@@ -841,38 +870,68 @@
           <li>Vitamix blender (Senthil has 1).</li>
           <li>Kids Crayons to bring to ICC.</li>
           <li>Stage Items to procure (including Fruits).</li>
-          <li>Insta360 + Abi's camera + Raffle tickets.</li>
+          <li>Insta360 + Abi&#x27;s camera.</li>
         </ul>
       </div>
-
-      <div class="pre-col bg-f5" data-family="5">
-        <h3>Thiru &amp; Unna: Action Items</h3>
+      <div class="pre-col bg-f5" data-family="thiru">
+        <h3>Thiru &amp; Unna: Bring from India</h3>
         <ul>
-          <li>Pre-planning: Maintain spreadsheet, manage logistics, set initial prices, purchase IKEA trays.</li>
-          <li>Week of Event: Print Yelam forms for sponsors; wrap/ribbon IKEA trays (Arathi Arunachalam has leftover materials).</li>
-          <li>Prepare PowerPoint presentation for Yelam; share Word + PPT + Updated 30-item list (+ boy/girl dress, vel silver &amp; vel brass).</li>
-          <li>Source Yelam items (Mandala items &amp; garlands), Yelai Thalapa Thundu (Fremont Nalli or India), Mangala items (Puri, etc. from India).</li>
+          <li><span class="badge b-done">Done</span> Yelai Thalapa Thundu.</li>
+          <li><span class="badge b-open">Open</span> Mangala items (Puri, etc. from India).</li>
+          <li><span class="badge b-open">Open</span> Poori, Vilakku, Pillayar.</li>
+        </ul>
+        <h3>Pre-Yelam</h3>
+        <ul>
+          <li><span class="badge b-open">Open</span> Pre-planning: Maintain spreadsheet, manage logistics, set initial prices, purchase IKEA trays.</li>
+          <li><span class="badge b-open">Open</span> Week of Event: Print Yelam forms for sponsors; wrap/ribbon IKEA trays (Arathi Arunachalam has leftover materials).</li>
+          <li><span class="badge b-open">Open</span> Prepare PowerPoint presentation for Yelam; share Word + PPT + Updated 30-item list (+ boy/girl dress, vel silver &amp; vel brass).</li>
+          <li><span class="badge b-open">Open</span> Source Yelam items (Mandala items &amp; garlands).</li>
+        </ul>
+        <h3>Jamkalam</h3>
+        <ul>
           <li><span class="badge b-done">Done</span> Lakshmi Palaniappan (1) Jamkalam received from Hari.</li>
-          <li>Collect: Pleasanton Arun (1 really big Jamkalam); Deepa Aachi (2 big Jamkalam + Tanjore painting).</li>
+          <li><span class="badge b-open">Open</span> Collect: Pleasanton Arun (1 really big Jamkalam).</li>
+          <li><span class="badge b-open">Open</span> Collect: Deepa Aachi (2 big Jamkalam + Tanjore painting).</li>
         </ul>
         <h3>Do Not Forget to Bring</h3>
         <ul>
-          <li>30 Yelam items, wrapped IKEA trays, PPT, printed forms, Jamkalams, Tanjore painting, Sam Annan fruit plate.</li>
+          <li>30 Yelam items wrapped</li>
+          <li>Laptop &amp; PPT</li>
+          <li>Printed forms</li>
+          <li>Sambasivam Annan fruit plate.</li>
         </ul>
       </div>
-
-      <div class="pre-col bg-f1" data-family="1">
+      <div class="pre-col bg-f1" data-family="muthu">
         <h3>Muthu &amp; Meena: Action Items</h3>
         <ul>
-          <li><strong>Coffee &amp; Tea Request (Sponsorship):</strong> 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</li>
-          <li><strong>Volunteers to Bring (Pickup):</strong> 11am — Find volunteer; 3pm — Senthamarai Kannan / Chokalingam.</li>
+          <li><span class="badge b-open">Open</span> <strong>Coffee &amp; Tea Request (Sponsorship):</strong> 11am (70 coffee + 100 tea); 3pm (200 coffee + 400 tea).</li>
+          <li><span class="badge b-open">Open</span> <strong>Volunteers to Bring (Pickup):</strong>
+            <ul>
+              <li>11am — Find volunteer.</li>
+              <li>3pm — Senthamarai Kannan / Chokalingam.</li>
+            </ul>
+          </li>
+          <li><span class="badge b-open">Open</span> <strong>December 17th (Costco Center):</strong> 20 units of water 8oz ($270).</li>
+          <li><span class="badge b-open">Open</span> <strong>Amazon:</strong>
+            <ul>
+              <li>All list of items as discussed on Amazon</li>
+              <li>Cleaning supplies &amp; sponge: Scrubber (10 metal + 10 sponge)</li>
+              <li>Spoons (2,000)</li>
+              <li>Stainless Steel - Serving spoons (12)</li>
+              <li>Stainless Steel - Palakaram tongs (12)</li>
+              <li>Aprons: 200 plastic aprons</li>
+              <li>Gloves: 1 pack of 200 pairs (plastic food grade)</li>
+              <li>Sugar in cup (2 small packs)</li>
+              <li>Boat cup for snacks (300)</li>
+            </ul>
+          </li>
+          <li><span class="badge b-open">Open</span> <strong>Dollar Tree / Amazon:</strong> Table covers: Rectangle (30).</li>
         </ul>
         <h3>Do Not Forget to Bring</h3>
         <ul>
-          <li>Outside Pillayar decorations.</li>
+          <li>Bring Entryway Pillayar — Janani &amp; Srilaxmi to decorate.</li>
         </ul>
       </div>
-
       <div class="pre-col bg-aachi" data-family="aachis">
         <h3>Aachis: Action Items</h3>
         <ul>
